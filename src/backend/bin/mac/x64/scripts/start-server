@@ -1,7 +1,4 @@
 #!/bin/bash
-OLDDIR=$(pwd)
-
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 export ANGULAR_DIR=${DIR%/*}
 
 # Check permissions on node? 
@@ -16,4 +13,4 @@ if [ ! -x $NODE_EXE ]; then
 fi
 
 #node app/server.js
-$NODE_EXE $ANGULAR_HOME/bin/app/server.js &> $ANGULAR_DIR/logs/http.log &
+$NODE_EXE $ANGULAR_HOME/backend/httpServer/server.js &> $ANGULAR_HOME/backend/logs/http.log &
