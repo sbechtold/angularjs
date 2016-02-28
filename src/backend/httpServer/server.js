@@ -37,12 +37,12 @@ app.post( '/app/reqAsJson', function ( req, res ) {
 app.use( '/', serveStatic( docRoot ) );
 
 // Handles PushStateRouting by ignoring everything after /Routing/Demos/PushStateRouting/
-app.use('/Routing/Demos/PushStateRouting/*', serveStatic(docRoot + '/Routing/Demos/PushStateRouting/index.html'));
+// app.use('/Routing/Demos/PushStateRouting/*', serveStatic(docRoot + '/Routing/Demos/PushStateRouting/index.html'));
 
 // Nice directories
 app.use( '/', serveIndex( docRoot, { 'icons' : true, 'view' : 'details' } ) );
 
-var server = app.listen( 8080, function () {
+var server = app.listen( 9080, function () {
   var host = server.address().address;
   var port = server.address().port;
 

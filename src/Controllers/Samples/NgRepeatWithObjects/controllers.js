@@ -1,6 +1,6 @@
 var app = angular.module("myRepeater", []);
 
-app.controller("MainController", function ($scope) {
+app.controller("MainController", ["$scope", function ($scope) {
    $scope.people = [
        { "Name":"Bob", "Age":23, "Gender":"Male", "Id":1 },
        { "Name":"Chuck", "Age":31, "Gender":"Male", "Id":2 },
@@ -10,5 +10,4 @@ app.controller("MainController", function ($scope) {
        { "Name":"Doris", "Age":26, "Gender":"Female", "Id":6 },
        { "Name":"Jean", "Age":37, "Gender":"Male", "Id":7 }
    ];
-
-});
+}]);

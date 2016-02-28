@@ -1,21 +1,18 @@
+/*
+Using the data below
+
+Create a module named myTeamApp
+
+Create a controller named ListController
+
+Add the data array to a variable in scope so that is accessible to the view
+*/
+
+
 var data = [
-       { "Name":"Pirates", "League":"NL", "Division":"Central", "Wins":100, "Loses":100 },
+       { "Name":"Pirates", "League":"NL", "Division":"Central", "Wins":101, "Loses":49, "Id":1 },
+       { "Name":"Cardinals", "League":"NL", "Division":"Central", "Wins":49, "Loses":101, "Id":2 },
+       { "Name":"Brewers", "League":"NL", "Division":"Central", "Wins":78, "Loses":82, "Id":3 },
+       { "Name":"Cubs", "League":"NL", "Division":"Central", "Wins":70, "Loses":90, "Id":4 },
+       { "Name":"Reds", "League":"NL", "Division":"Central", "Wins":85, "Loses":75, "Id":5 }
    ];
-
-
-
-
-var app = angular.module("myRepeater", []);
-
-app.controller("MainController", function ($scope) {
-   $scope.people = [
-       { "Name":"Bob", "Age":23, "Gender":"Male" },
-       { "Name":"Chuck", "Age":31, "Gender":"Male" },
-       { "Name":"John", "Age":25, "Gender":"Male" },
-       { "Name":"Kate", "Age":42, "Gender":"Female" },
-       { "Name":"Abigail", "Age":32, "Gender":"Female" },
-       { "Name":"Doris", "Age":26, "Gender":"Female" },
-       { "Name":"Jean", "Age":37, "Gender":"Male" }
-   ];
-
-});

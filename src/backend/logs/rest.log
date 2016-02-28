@@ -3,16 +3,4 @@
 js-bson: Failed to load c++ bson extension, using pure JS version
 { classDB: { url: 'mongodb://127.0.0.1:27017/class' },
   localhost: { url: 'http://localhost:8000' } }
-Server has started up and is bound to port 8002
-events.js:85
-      throw er; // Unhandled 'error' event
-            ^
-Error: failed to connect to [127.0.0.1:27017]
-    at null.<anonymous> (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:556:74)
-    at emit (events.js:118:17)
-    at null.<anonymous> (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:156:15)
-    at emit (events.js:110:17)
-    at Socket.<anonymous> (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:534:10)
-    at Socket.emit (events.js:107:17)
-    at net.js:459:14
-    at process._tickCallback (node.js:355:11)
+Server has started up and is bound to port 8081

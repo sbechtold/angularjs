@@ -1,6 +1,6 @@
 var app = angular.module("myEventHandlers", []);
 
-app.controller("MainController", function ($scope) {
+app.controller("MainController", ["$scope", function ($scope) {
    $scope.people = [
        { "Name":"Bob", "Age":23, "Gender":"Male", "Id":1 },
        { "Name":"Chuck", "Age":31, "Gender":"Male", "Id":2 },
@@ -33,4 +33,4 @@ app.controller("MainController", function ($scope) {
      $scope.addPerson = {};
      
    };
-});
+}]);
