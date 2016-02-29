@@ -43,3 +43,4 @@
 2016-02-28T15:53:45.858-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60911 #14 (4 connections now open)
 2016-02-28T15:53:45.859-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60912 #15 (5 connections now open)
 2016-02-29T02:20:32.788-0500 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 427ms
+2016-02-29T09:03:57.617-0500 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 168ms
