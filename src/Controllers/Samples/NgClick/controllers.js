@@ -10,27 +10,27 @@ app.controller("MainController", ["$scope", function ($scope) {
        { "Name":"Doris", "Age":26, "Gender":"Female", "Id":6 },
        { "Name":"Jean", "Age":37, "Gender":"Male", "Id":7 }
    ];
-   
+
    $scope.addPerson = {}; // Set an empty object
-   
+
    $scope.handleEvent = function (evt) {
        $scope.lastEvent = evt.type;
    };
-   
-   
+
+
    $scope.remove = function (person, evt) {
      $scope.handleEvent(evt);
-     
+
      var location = $scope.people.indexOf(person);
      if (location > -1)
-        $scope.people.splice(location, 1);  
+        $scope.people.splice(location, 1);
    };
-   
+
    $scope.add = function (evt) {
-     $scope.handleEvent(evt);  
-     
+     $scope.handleEvent(evt);
+
      $scope.people.push($scope.addPerson);
      $scope.addPerson = {};
-     
+
    };
 }]);
