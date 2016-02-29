@@ -2,5 +2,8 @@
 	/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/node_modules/mongodb/node_modules/bson/build/Release/bson.node: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00]
 js-bson: Failed to load c++ bson extension, using pure JS version
 { classDB: { url: 'mongodb://127.0.0.1:27017/class' },
-  localhost: { url: 'http://localhost:8000' } }
-Server has started up and is bound to port 8081
+  localhost: { url: 'http://localhost:8080' } }
+Server has started up and is bound to port 9081
+[0mGET / [33m404 [0m3.120 ms - 13[0m
+[0mGET /favicon.ico [33m404 [0m0.936 ms - 24[0m
+[0mGET / [33m404 [0m0.520 ms - 13[0m

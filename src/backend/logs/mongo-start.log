@@ -1,0 +1,45 @@
+2016-02-28T15:53:26.356-0500 I JOURNAL  [initandlisten] journal dir=/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/backend/data/db/journal
+2016-02-28T15:53:26.356-0500 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2016-02-28T15:53:26.371-0500 I JOURNAL  [durability] Durability thread started
+2016-02-28T15:53:26.372-0500 I JOURNAL  [journal writer] Journal writer thread started
+2016-02-28T15:53:26.372-0500 I CONTROL  [initandlisten] MongoDB starting : pid=41049 port=27017 dbpath=/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/backend/data/db 64-bit host=two-2.home
+2016-02-28T15:53:26.372-0500 I CONTROL  [initandlisten] 
+2016-02-28T15:53:26.372-0500 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2016-02-28T15:53:26.372-0500 I CONTROL  [initandlisten] db version v3.0.7
+2016-02-28T15:53:26.372-0500 I CONTROL  [initandlisten] git version: 6ce7cbe8c6b899552dadd907604559806aa2e9bd
+2016-02-28T15:53:26.372-0500 I CONTROL  [initandlisten] build info: Darwin mci-osx108-13.build.10gen.cc 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan  6 22:37:10 PST 2013; root:xnu-2050.22.13~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2016-02-28T15:53:26.372-0500 I CONTROL  [initandlisten] allocator: system
+2016-02-28T15:53:26.372-0500 I CONTROL  [initandlisten] options: { net: { http: { RESTInterfaceEnabled: true, enabled: true } }, storage: { dbPath: "/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/backend/data/db", directoryPerDB: true } }
+2016-02-28T15:53:26.537-0500 I NETWORK  [websvr] admin web console waiting for connections on port 28017
+2016-02-28T15:53:26.538-0500 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-02-28T15:53:28.273-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60888 #1 (1 connection now open)
+2016-02-28T15:53:28.279-0500 I COMMAND  [conn1] CMD: drop class.states
+2016-02-28T15:53:28.282-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60889 #2 (2 connections now open)
+2016-02-28T15:53:28.286-0500 I NETWORK  [conn2] end connection 127.0.0.1:60889 (1 connection now open)
+2016-02-28T15:53:28.286-0500 I NETWORK  [conn1] end connection 127.0.0.1:60888 (1 connection now open)
+2016-02-28T15:53:28.291-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60892 #3 (1 connection now open)
+2016-02-28T15:53:28.292-0500 I COMMAND  [conn3] CMD: drop class.products
+2016-02-28T15:53:28.295-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60893 #4 (2 connections now open)
+2016-02-28T15:53:28.297-0500 I NETWORK  [conn3] end connection 127.0.0.1:60892 (1 connection now open)
+2016-02-28T15:53:28.297-0500 I NETWORK  [conn4] end connection 127.0.0.1:60893 (1 connection now open)
+2016-02-28T15:53:28.305-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60896 #5 (1 connection now open)
+2016-02-28T15:53:28.305-0500 I COMMAND  [conn5] CMD: drop class.categories
+2016-02-28T15:53:28.307-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60897 #6 (2 connections now open)
+2016-02-28T15:53:28.308-0500 I NETWORK  [conn6] end connection 127.0.0.1:60897 (1 connection now open)
+2016-02-28T15:53:28.308-0500 I NETWORK  [conn5] end connection 127.0.0.1:60896 (1 connection now open)
+2016-02-28T15:53:28.314-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60900 #7 (1 connection now open)
+2016-02-28T15:53:28.315-0500 I COMMAND  [conn7] CMD: drop class.suppliers
+2016-02-28T15:53:28.318-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60901 #8 (2 connections now open)
+2016-02-28T15:53:28.319-0500 I NETWORK  [conn8] end connection 127.0.0.1:60901 (1 connection now open)
+2016-02-28T15:53:28.319-0500 I NETWORK  [conn7] end connection 127.0.0.1:60900 (1 connection now open)
+2016-02-28T15:53:28.326-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60904 #9 (1 connection now open)
+2016-02-28T15:53:28.327-0500 I COMMAND  [conn9] CMD: drop class.customers
+2016-02-28T15:53:28.330-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60905 #10 (2 connections now open)
+2016-02-28T15:53:28.332-0500 I NETWORK  [conn9] end connection 127.0.0.1:60904 (1 connection now open)
+2016-02-28T15:53:28.332-0500 I NETWORK  [conn10] end connection 127.0.0.1:60905 (1 connection now open)
+2016-02-28T15:53:45.854-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60908 #11 (1 connection now open)
+2016-02-28T15:53:45.857-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60909 #12 (2 connections now open)
+2016-02-28T15:53:45.858-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60910 #13 (3 connections now open)
+2016-02-28T15:53:45.858-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60911 #14 (4 connections now open)
+2016-02-28T15:53:45.859-0500 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:60912 #15 (5 connections now open)
+2016-02-29T02:20:32.788-0500 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 427ms
