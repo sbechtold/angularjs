@@ -5,7 +5,7 @@ var config = {
     url: 'mongodb://127.0.0.1:27017/class'
   },
   localhost: {
-    url: 'http://localhost:8080'
+    url: 'http://localhost:9080'
   }
 };
 
