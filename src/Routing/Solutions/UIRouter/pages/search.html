@@ -1,3 +1,9 @@
+<!-- 
+    Need to be able to click on a link to take them to the team list
+    
+    Need to also have a nested view to show the search results
+-->
+
 <h2>Filter By:</h2>
 <ul>
     <li>By Name: <input type="text" ng-model="filter.Name" /></li>
@@ -14,8 +20,7 @@
                     <label for="desc">Desc</label></li>
 </ul>
 
-
-<a ui-sref=".list">Search </a>
+<a ui-sref=".list" >Search </a>
 
 <div ui-view>
     

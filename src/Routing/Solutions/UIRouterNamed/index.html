@@ -1,12 +1,16 @@
 <!-- 
-    Need to add a basic container for your views
+    Change your view configuration to support named views 
+    for search and list
 -->
 <!DOCTYPE html>
     <html ng-app="myUIRouter">
      <head>
         <title>Routing App</title>
     </head>
-    <body ng-controller="AppController" ui-view>
+    <body ng-controller="AppController">
+         
+        <div ui-view="search"></div>
+        <div ui-view="list"></div>
          
         <script src="/common/js/angular/angular.js"></script>
         <script src="/common/js/angular-ui-router/angular-ui-router.js"></script>

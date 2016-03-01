@@ -1,11 +1,11 @@
 /*
 
-Setup our route configuration
-
-Should look to have 3 states, 
-    Search
-    List
-    Details
+Change your state configuration to have named views for the 
+default state
+    list
+    search
+    
+ These should display the same containers as before
 */
 angular.module("myUIRouter", ["ui.router", "myUIRouter.controllers"])
     .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {

@@ -1,12 +1,15 @@
-<!-- 
-    Need to add a basic container for your views
--->
 <!DOCTYPE html>
     <html ng-app="myUIRouter">
      <head>
-        <title>Routing App</title>
+        <title>Routing App</title>  
+        <style>
+            div { margin:5pt; padding:5pt}
+        </style>      
     </head>
-    <body ng-controller="AppController" ui-view>
+    <body ng-controller="AppController">
+        
+        <div ui-view="search"></div>
+        <div ui-view="list"></div>
          
         <script src="/common/js/angular/angular.js"></script>
         <script src="/common/js/angular-ui-router/angular-ui-router.js"></script>
