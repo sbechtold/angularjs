@@ -24,7 +24,7 @@ which we are checking to see if it is greater than the given min.
 
 */
 
-angular.module("filterApp.filters", [])
+angular.module("complexFilterApp.filters", [])
     .filter("greaterThan", [function() {
         return function(data, minimum, propertyName) {
             var result = [];

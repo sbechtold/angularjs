@@ -1,4 +1,4 @@
-angular.module("filterApp.controllers", ["filterApp.filters"])
+angular.module("complexFilterApp.controllers", ["complexFilterApp.filters"])
     .controller("MainController", ["$scope", function ($scope) {
         $scope.people = [
             { "Name":"Bob", "Age":23, "Gender":"Male", "Id":1 },

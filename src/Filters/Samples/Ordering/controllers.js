@@ -13,6 +13,7 @@ app.controller("MainController", ["$scope", function ($scope) {
    $scope.availableForSort = ["Name", "Age", "Gender"];
    $scope.sortOn = "Name";
    $scope.sortDirection = true;
+   
    // Doesn't have to be done this way; however, it acknowledges the use
    // of a variable by this name
    $scope.filter = {};
