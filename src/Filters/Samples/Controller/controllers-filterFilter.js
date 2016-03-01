@@ -10,34 +10,35 @@ app.controller("MainController", ["$scope", "filterFilter", function ($scope, fi
        { "Name":"Doris", "Age":26, "Gender":"Female", "Id":6 },
        { "Name":"Jean", "Age":37, "Gender":"Male", "Id":7 }
    ];
-   
+
    $scope.addPerson = {}; // Set an empty object
-   
+
    $scope.handleEvent = function (evt) {
        $scope.lastEvent = evt.type;
    };
-   
-   
+
+
    $scope.remove = function (person, evt) {
      $scope.handleEvent(evt);
-     
+
      var location = $scope.people.indexOf(person);
      if (location > -1)
-        $scope.people.splice(location, 1);  
+        $scope.people.splice(location, 1);
    };
-   
-   $scope.add = function (evt) {
-     $scope.handleEvent(evt);  
 
+   $scope.add = function (evt) {
+     $scope.handleEvent(evt);
+
+     // <div ng-repeat="one in people | filter:filterObj" />
      var filter = { Name:$scope.addPerson.Name };
      var result = filterFilter($scope.people, filter);
      if (result && result.length > 0) {
          console.error("An element with the given name is already present within array. Cannot add new person");
          return;
      }
-     
+
      $scope.people.push($scope.addPerson);
      $scope.addPerson = {};
-     
+
    };
 }]);

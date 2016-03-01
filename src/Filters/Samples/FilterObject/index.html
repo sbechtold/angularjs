@@ -25,7 +25,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="one in people | filter:filter | orderBy:'Gender':true">
+                <tr ng-repeat="one in people | filter:filter">
                     <td>{{one.Name}}</td>
                     <td>{{one.Age}}</td>
                     <td>{{one.Gender}}</td>
