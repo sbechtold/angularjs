@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <html ng-app="myApp">
+     <head>
+        <title>Simple Directives</title>
+    </head>
+    <body ng-controller="HomeController">
+        <h1>Directives</h1>
+        <input type="text" ng-model="message" />
+        <br /><br  />
+        
+        
+        <h2>Dependent</h2>
+        <dependent></dependent>
+        <br />
+        <h2>Isolate</h2>
+        <isolate message="message"></isolate>
+        <br />
+
+        <script src="/common/js/angular/angular.js"></script>
+        <script src="directives/directives.js"></script>
+        <script src="controllers.js"></script>
+    </body>
+</html>

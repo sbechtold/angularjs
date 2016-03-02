@@ -1,4 +1,4 @@
-/* 
+/*
 
 Write a test using the jasmine mocking framework which will create a mock productFactory
 and return data
@@ -7,11 +7,11 @@ You should (at a minimum) test the all() service method
 */
 
 describe("Testing Controller", function () {
-    
+
     var productService;
     beforeEach( function () {
         module( 'productApp.factories', function ( $provide ) {
-             $provide.factory( 'productFactory', function ( $log ) {
+             $provide.factory( 'productFactory', function (  ) {
                 return {
                     query :  jasmine.createSpy().and.returnValue([{
                         "_id": "56d68af3b4f8cbc7effa44b5",
@@ -28,18 +28,18 @@ describe("Testing Controller", function () {
                         "discontinued": false
                     }])
                 }})
-            }); 
-                        
+            });
+
         module( 'productApp.services' );
         inject( function ( _productService_ ) {
             productService = _productService_;
       } );
     });
-    
+
     it("test fetch products", function () {
-       var data = productService.all();  
+       var data = productService.all();
        expect(data.length).toBe(1);
-       expect(data[0].productName).toBe("Chang");  
-           
+       expect(data[0].productName).toBe("Chang");
+
     });
 });
