@@ -1411,3 +1411,4 @@ Web server running on :::9080
 [0mGET /common/js/angular/angular.js [36m304 [0m0.661 ms - -[0m
 [0mGET /Providers/Exercises/Services/pages/list.html [32m200 [0m0.393 ms - 1071[0m
 [0mGET /common/css/bootstrap/bootstrap.css.map [36m304 [0m0.253 ms - -[0m
+[0mGET / [32m200 [0m2.959 ms - 12068[0m

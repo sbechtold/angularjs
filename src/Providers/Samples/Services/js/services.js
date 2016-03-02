@@ -1,4 +1,4 @@
-angular.module("statesApp.services", [])
+angular.module("statesApp.services", ["statesApp.factories"])
     .service("stateService", ["stateFactory", "$q", function (stateFactory, $q) {
         this.all = function() {
             return stateFactory.query();
