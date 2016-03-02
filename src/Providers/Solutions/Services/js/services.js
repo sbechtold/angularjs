@@ -23,7 +23,7 @@ angular.module("productApp.services", ["productApp.factories"])
         this.save = function(one) {
             var deferred = $q.defer();
             var result = { $promise: deferred.promise, $resolved:false};
-            productFactory.get({id:(one._id) ? one._id : -1}, function (result) {
+            productFactory.get({id:(one.productID) ? one.productID : -1}, function (result) {
                 if (result && result._id) {
                     one.$update(function (obj) {
                         angular.extend(result, one);

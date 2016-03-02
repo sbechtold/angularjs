@@ -13,16 +13,16 @@ angular.module("statesApp.controllers", [])
            method:"GET",
            cache: true
        }).then(function (result) {
-          $scope.states = result.data; 
+          $scope.states = result.data;
        }).catch(function (err) {
            console.error("An error occured fetching states", err);
        });
-       
-       
+
+
        $scope.selectState = function (state) {
            $scope.go("/details/" + state._id);
        };
-       
+
        $scope.clearCache = function () {
            $scope.stateCache.removeAll();
        };
@@ -33,7 +33,7 @@ angular.module("statesApp.controllers", [])
            method:"GET",
            cache: $scope.stateCache
        }).then(function (result) {
-          $scope.state = result.data; 
+          $scope.state = result.data;
        }).catch(function (err) {
            console.error("An error occured fetching states", err);
        });

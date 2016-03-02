@@ -1,5 +1,5 @@
 describe("Testing Controller", function () {
-    
+
     var stateService;
     beforeEach( function () {
         module( 'statesApp.factories', function ( $provide ) {
@@ -20,18 +20,19 @@ describe("Testing Controller", function () {
                         }];
                     }
                 }})
-            }); 
-            
+            });
+
         module( 'statesApp.services' );
-        inject( function ( _stateService_ ) {
+        inject( function ( _stateService_, _$controller_ ) {
             stateService = _stateService_;
+            $controller = _$controller_
       } );
     });
-    
+
     it("test fetch states", function () {
-       var data = stateService.all();  
+       var data = stateService.all();
        expect(data.length).toBe(1);
-       expect(data[0].name).toBe("ALASKA");  
-           
+       expect(data[0].name).toBe("ALASKA");
+
     });
 });
