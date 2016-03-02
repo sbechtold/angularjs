@@ -4,22 +4,21 @@ js-bson: Failed to load c++ bson extension, using pure JS version
 { classDB: { url: 'mongodb://127.0.0.1:27017/class' },
   localhost: { url: 'http://localhost:9080' } }
 Server has started up and is bound to port 9081
-[0mGET /States [32m200 [0m21.254 ms - 15555[0m
-[0mGET /States [36m304 [0m10.067 ms - -[0m
-[0mGET / [33m404 [0m1.733 ms - 13[0m
-[0mGET /States [32m200 [0m6.548 ms - 15555[0m
-[0mGET /States [36m304 [0m5.027 ms - -[0m
-[0mGET /States/AZ [32m200 [0m3.282 ms - 253[0m
-[0mGET /States/AZ [36m304 [0m1.427 ms - -[0m
-[0mGET /States [36m304 [0m4.518 ms - -[0m
-[0mGET /States [36m304 [0m9.044 ms - -[0m
-[0mGET / [33m404 [0m0.722 ms - 13[0m
-[0mGET /People [33m404 [0m0.165 ms - 19[0m
-[0mGET /Products [36m304 [0m19.031 ms - -[0m
-[0mGET /Products [36m304 [0m16.777 ms - -[0m
-[0mGET /States [36m304 [0m9.829 ms - -[0m
-[0mGET /States [36m304 [0m7.626 ms - -[0m
-[0mGET / [33m404 [0m0.501 ms - 13[0m
-[0mGET /favicon.ico [33m404 [0m0.337 ms - 24[0m
-[0mGET /Products [32m200 [0m12.975 ms - 36156[0m
-[0mGET /Products [36m304 [0m12.873 ms - -[0m
+[0mGET /States/AZ [36m304 [0m14.371 ms - -[0m
+[0mGET /States/OH [36m304 [0m5.383 ms - -[0m
+[0mOPTIONS /States/OH [32m200 [0m1.115 ms - 19[0m
+/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/backend/httpServer/globals/util.js:20
+                entity.safeSet( instance, req.body, model.getFields() );
+                                                          ^
+TypeError: undefined is not a function
+    at Promise.<anonymous> (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/backend/httpServer/globals/util.js:20:59)
+    at Promise.<anonymous> (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/node_modules/mpromise/lib/promise.js:177:8)
+    at Promise.emit (events.js:107:17)
+    at Promise.emit (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+    at Promise.fulfill (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/node_modules/mpromise/lib/promise.js:97:20)
+    at /Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/lib/query.js:1406:13
+    at model.Document.init (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/lib/document.js:254:11)
+    at completeOne (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/lib/query.js:1404:10)
+    at Immediate.cb (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/lib/query.js:1158:11)
+    at Immediate._onImmediate (/Users/sfbechtold/Documents/dev/src/git/mine/angularjs/src/node_modules/mongoose/node_modules/mquery/lib/utils.js:137:16)
+    at processImmediate [as _immediateCallback] (timers.js:367:17)

@@ -22,7 +22,7 @@ var util = {
                 if ( err ) {
                     res.send( err );
                 }
-                res.json( { message : model.getType() + ' #' + instance[primaryKeyField] + ' updated' } )
+                res.json( instance );
                 } )
             }
             } 

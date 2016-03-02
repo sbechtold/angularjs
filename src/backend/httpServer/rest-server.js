@@ -5,6 +5,8 @@ var config = require('./config'),
   stateService = require( './services/stateService' ),
   productService = require( './services/productService' ),
   categoryService = require( './services/categoryService' ),
+  customerService = require( './services/customerService' ),
+  countryService = require( './services/countryService' ),
   mongoose = require( 'mongoose' );
 
 
@@ -32,7 +34,7 @@ var router = express.Router();
 // middleware to use for all requests
 app.use( function ( req, res, next ) {
   res.header( "Access-Control-Allow-Origin", config.localhost.url );
-  res.header( "Access-Control-Allow-Methods", "POST,PUT" );
+  res.header( "Access-Control-Allow-Methods", "POST,PUT,DELETE" );
   res.header( "Access-Control-Allow-Headers", "X-Requested-With, Content-Type" );
   res.header( 'Access-Control-Expose-Headers', 'Accept-Ranges, Content-Encoding, Content-Length, Content-Range, X-Content-Range' );
   res.header( "Content-Type", "application/json" );
@@ -51,6 +53,8 @@ router.get( '/', function ( req, res ) {
 app.use( '/states', stateService );
 app.use( '/products', productService );
 app.use( '/categories', categoryService );
+app.use( '/customers', customerService );
+app.use( '/countries', countryService );
 
 // START THE SERVER
 // =============================================================================

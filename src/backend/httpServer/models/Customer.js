@@ -11,7 +11,8 @@ var fieldConfig =  {
   "customerID"   : {type: String, required: true },
   "address"      : String,
   "phone"        : String,
-  "country"      : String
+  "country"      : String,
+  "state"      : String
 };
 var CustomerSchema = new Schema(fieldConfig, {
   collection : 'customers'

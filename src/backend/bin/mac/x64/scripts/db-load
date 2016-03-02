@@ -5,6 +5,7 @@ PATH=$DIR:$REST_DIR/node_modules/.bin:$PATH
 MONGOIMPORT_EXE=$MONGO_HOME/mongoimport
 
 $MONGOIMPORT_EXE -v  --db class --collection states --file $REST_DIR/data/init/states.json --jsonArray --drop
+$MONGOIMPORT_EXE -v  --db class --collection countries --file $REST_DIR/data/init/countries.json --jsonArray --drop
 $MONGOIMPORT_EXE -v  --db class --collection products --drop --file $REST_DIR/data/init/products.json --jsonArray
 $MONGOIMPORT_EXE -v  --db class --collection categories --drop --file $REST_DIR/data/init/categories.json --jsonArray
 $MONGOIMPORT_EXE -v  --db class --collection suppliers --drop --file $REST_DIR/data/init/suppliers.json --jsonArray

@@ -20,6 +20,9 @@ router.route( '/:id' )
   .put(function (req, res) {
     Utils.genericPut( req, res, Model, 'categoryID');
   })
+  .post(function (req, res) {
+    Utils.genericPost( req, res, Model);
+  })
   .delete(function (req, res) {
     Utils.genericDelete( req, res, Model, 'categoryID');
   });

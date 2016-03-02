@@ -18,10 +18,13 @@ router.route( '/:id' )
     Utils.genericOne( req, res, Product, 'productID' );
   } )
   .put(function (req, res) {
-    Utils.genericPut( req, res, Product, 'productID');
+    Utils.genericPut( req, res, Product, '_id');
+  })
+  .post(function (req, res) {
+    Utils.genericPost( req, res, Product);
   })
   .delete(function (req, res) {
-    Utils.genericDelete( req, res, Product, 'productID');
+    Utils.genericDelete( req, res, Product, '_id');
   });
 
 module.exports = router;
