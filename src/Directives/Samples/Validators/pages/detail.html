@@ -13,6 +13,11 @@
                         <div ng-message="maxlength">State Abbreviation can be no longer than 2 chars</div>
                         <div ng-message="checkAbbreviation">State Abbreviation is a duplicate. Please choose another</div>
                     </li>
+                    <li ng-messages="EditStates.squareMiles.$error">
+                        <div ng-message="required">Square Miles is required</div>
+                        <div ng-message="number">Square Miles should be a positive number</div>
+                        <div ng-message="range">Square Miles should be between 200000 and 100</div>
+                    </li>
                 </ul>
             </div>
               
@@ -40,7 +45,7 @@
                 </div>
                 <div class="form-group">
                     <label for="squareMiles">Square Miles</label>
-                    <input type="number" class="form-control" name="squareMiles" placeholder="Square Miles" ng-model="state.squareMiles" required positive-integer />
+                    <input type="number" class="form-control" name="squareMiles" placeholder="Square Miles" ng-model="state.squareMiles" required positive-integer range upper="2000000" lower="100" />
                 </div>
                 <div class="form-group">
                     <label for="timeZone1">Time Zone 1</label>

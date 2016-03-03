@@ -15,6 +15,33 @@ angular.module("statesApp.directives", ["statesApp.services"])
             
         }
     }])
+    .directive("range", [function () {
+        return {
+            restrict: 'A',
+            require: 'ngModel', 
+            scope: {
+                upper:"=",
+                lower:"="
+            },
+            link: function (scope, element, attrs, ngModelController) {
+                
+                var upperBound = parseInt(scope.upper);
+                if (!upperBound) upperBound = 1000000;
+                
+                var lowerBound = parseInt(scope.lower);
+                if (!lowerBound) upperBound = -1000000;
+                
+                ngModelController.$validators.range = function(modelValue, viewValue) {
+                    var value = parseInt(viewValue);
+                    if (!value) 
+                        return false;
+                        
+                    return (value < upperBound && value > lowerBound);
+                }
+            }
+            
+        }
+    }])
     .directive("checkAbbreviation", ["stateService", "$q", function (stateService, $q) {
         return {
             restrict: 'A',

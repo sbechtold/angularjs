@@ -248,3 +248,8 @@ Server has started up and is bound to port 9081
 [0mOPTIONS /States/KS [32m200 [0m0.655 ms - 24[0m
 [0mPUT /States/KS [32m200 [0m10.559 ms - 288[0m
 [0mGET /States [32m200 [0m6.172 ms - 15705[0m
+[0mGET /States [36m304 [0m7.539 ms - -[0m
+[0mGET /States/ID [32m200 [0m0.829 ms - 257[0m
+[0mGET /States/ID [36m304 [0m1.614 ms - -[0m
+[0mGET /States/ID [36m304 [0m1.316 ms - -[0m
+[0mGET /States/ID [36m304 [0m1.295 ms - -[0m
