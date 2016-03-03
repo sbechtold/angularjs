@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+    <html ng-app="myHttpTest">
+     <head>
+        <title>First HTTP</title>
+    </head>
+    <body ng-controller="MainController">
+        
+        <h1>States</h1>
+        <ul>
+            <li ng-repeat="state in states">{{state.name}}</li>
+        </ul>
+        
+        <script src="/common/js/angular/angular.js"></script>
+        <script src="/common/js/angular-mocks/angular-mocks.js"></script>
+        <script src="controllers.js"></script>
+        <script src="mock.js"></script>
+    </body>
+</html>
