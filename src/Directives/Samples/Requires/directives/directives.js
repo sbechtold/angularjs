@@ -18,9 +18,7 @@ angular.module("myApp.directives", [])
             templateUrl:"directives/partials/pane-container-template.html",
             restrict:"E",
             transclude:true,
-            scope: {
-                header:"="
-            },
+            scope:{},
             controller: function ( $scope ) {
                 var panes = $scope.panes = [];
                 $scope.select = function ( pane ) {

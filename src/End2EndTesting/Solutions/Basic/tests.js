@@ -12,12 +12,10 @@ describe( 'Testing Our HTTP Page', function () {
     } );
 
     it( 'testCase: Verify all have been loaded', function () {
-      var nameList = element.all( by.repeater( 'product in products' ) );
-      var count;
-      nameList.then( function ( names ) {
-        count = names.length;
-        expect(count).toBe(78);
-      } );
+      element.all( by.repeater( 'product in products' ) )
+            .then( function ( products ) {
+            expect(products.length).toBe(78);
+        });
      
     } );
   } );
