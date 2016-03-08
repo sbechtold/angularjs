@@ -8,9 +8,9 @@ angular.module("myNgRouter.controllers", ["myNgRouter.filters"])
             { "Name":"Abigail", "Age":32, "Gender":"Female", "Id":5 },
             { "Name":"Doris", "Age":26, "Gender":"Female", "Id":6 },
             { "Name":"Jean", "Age":37, "Gender":"Male", "Id":7 }
-        ]; 
+        ];
    }])
-   .controller("HomeController", ["$scope" , function($scope, findByIdFilter) {
+   .controller("HomeController", ["$scope" , function($scope) {
 
    }])
    .controller("DetailController", ["$scope" , "findByIdFilter", "$routeParams", function($scope, findByIdFilter, $routeParams) {
