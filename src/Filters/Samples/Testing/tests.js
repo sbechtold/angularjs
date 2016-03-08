@@ -1,10 +1,10 @@
 describe("Testing Filters", function () {
-    
+
     var testScope, data = [
                 { "Name":"Bob", "Age":23, "Gender":"Male", "Id":1 },
                 { "Name":"Chuck", "Age":42, "Gender":"Male", "Id":2 },
                 { "Name":"John", "Age":25, "Gender":"Male", "Id":3 }];
-    
+
     describe("Test Local Filter", function () {
         beforeEach( function () {
             module( 'filterApp' );
@@ -13,9 +13,9 @@ describe("Testing Filters", function () {
                 $controller( 'MainController', { $scope : testScope } );
             });
         });
-        
+
         it("testCase: ageGreaterThan", function () {
-            
+
             testScope.minAge = 30;
             expect(testScope.minAge).toBe(30);
             data.forEach(function (one) {
@@ -24,34 +24,32 @@ describe("Testing Filters", function () {
             });
         });
     });
-    
+
     describe("Test Reusable Filter", function () {
         var filter;
         beforeEach( function () {
             module( 'filterApp.filters' );
-            inject( function ( $filter, $rootScope ) {
-                testScope = $rootScope.$new();
+            inject( function ( $filter ) {
                 filter = $filter( 'overTheHill');
             });
         });
-        
+
         it("testCase: overTheHill", function () {
             var result = filter(data);
             expect(result.length).toBe(1);
             expect(result).toContain({ "Name":"Chuck", "Age":42, "Gender":"Male", "Id":2 });
         });
     });
-    
+
     describe("Test Complex Reusable Filter", function () {
         var filter;
         beforeEach( function () {
             module( 'complexFilterApp.filters' );
-            inject( function ( $filter, $rootScope ) {
-                testScope = $rootScope.$new();
+            inject( function ( $filter ) {
                 filter = $filter( 'greaterThan');
             });
         });
-        
+
         it("testCase: greaterThan", function () {
             var result = filter(data, 40, "Age");
             expect(result.length).toBe(1);
