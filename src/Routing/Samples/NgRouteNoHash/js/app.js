@@ -12,6 +12,6 @@ angular.module("myNgRouter", ["ngRoute", "myNgRouter.controllers"])
             .otherwise({
                 redirectTo: '/'
             });
-            
+
             $locationProvider.html5Mode(true)
     }]);
