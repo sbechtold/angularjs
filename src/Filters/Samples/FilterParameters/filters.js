@@ -48,4 +48,16 @@ angular.module("complexFilterApp.filters", [])
             });
             return result;  
         }
-    }]);
+    }])    
+    // Let's take a look at a filter that has a dependency on another filter
+    .filter("checkValue", ["filterFilter", function(filterFilter) {
+        return function(data, propertyName, propertyValue) {
+            if (!propertyName || !propertyValue || !data || !data.length)
+                return data;
+            
+            var filter = {};
+            filter[propertyName] = propertyValue;
+            
+            return filterFilter(data, filter);
+        }
+    }]);;

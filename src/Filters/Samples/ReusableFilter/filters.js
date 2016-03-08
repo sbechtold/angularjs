@@ -10,10 +10,4 @@ angular.module("filterApp.filters", [])
             });
             return result;
         }
-    }])
-    .filter("checkThirty", ["filterFilter", function(filterFilter) {
-        return function(data) {
-            var filter = {Age: 42};
-            return filterFilter(data, filter);
-        }
     }]);
