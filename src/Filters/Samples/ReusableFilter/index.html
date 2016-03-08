@@ -13,9 +13,9 @@
                             <input type="radio" ng-model="filter.Gender" name="male" id="male" value="Male" />
                             <label for="male">Male</label></li>
         </ul>
-        
-        
-        
+
+
+
         <h2>Records</h2>
         <table>
             <thead>
@@ -26,14 +26,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="one in people | filter:filter | overTheHill">
+                <tr ng-repeat="one in people | filter:filter | checkThirty">
                     <td>{{one.Name}}</td>
                     <td>{{one.Age}}</td>
                     <td>{{one.Gender}}</td>
                 </tr>
             </tbody>
         </table>
-            
+
         <script src="/common/js/angular/angular.js"></script>
         <script src="app.js"></script>
         <script src="controllers.js"></script>
