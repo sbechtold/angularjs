@@ -49,7 +49,6 @@ angular.module("productApp.controllers", ["productApp.factories"])
                });
            }
            else {
-               $scope.product._id = $scope.product.productID;
                $scope.product.$save(function (params) {
                    $scope.go("/");
                }).catch(function (params) {
