@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="one in teams | filter:filter | orderBy:sortOn:sortDirection">
+        <tr ng-repeat="one in teams | filter:filter | orderBy:sort.on:sort.direction">
             <td>{{one.Name}}</td>
             <td>{{one.League}}</td>
             <td>{{one.Division}}</td>

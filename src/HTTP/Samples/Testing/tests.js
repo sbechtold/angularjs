@@ -1,13 +1,13 @@
 describe("Testing Controller", function () {
-    
+
     var testScope, controllerService;
-    
+
     beforeEach( function () {
         module( 'myHttp' );
         inject( function ( $controller, $rootScope, $httpBackend ) {
             httpBackend = $httpBackend;
             controllerService = $controller;
-            $httpBackend.when('GET', 'http://localhost:9081/States')
+            $httpBackend.expect('GET', 'http://localhost:9081/States')
                 .respond([{
                             "_id": "AZ",
                             "name": "ARIZONA",
@@ -21,17 +21,16 @@ describe("Testing Controller", function () {
                             "dst": "NO"
                         }
                 ]);
-            
-            
+
             testScope = $rootScope.$new();
         });
     });
-    
+
     it("test fetch states", function () {
         controllerService( 'MainController', { $scope : testScope } );
         httpBackend.flush();
-        
+
         expect(testScope.states.length).toBe(1);
-        expect(testScope.states[0].name).toBe("ARIZONA");        
+        expect(testScope.states[0].name).toBe("ARIZONA");
     });
 });
