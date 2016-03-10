@@ -32,8 +32,8 @@ describe("Testing Controller", function () {
 
         module( 'productApp.services' );
         inject( function ( _productService_ , _productFactory_) {
-            productService = _productService_;
-            productFactory = _productFactory_;
+            productService = _productService_; // Reference the injected service
+            productFactory = _productFactory_; // Reference the injected factory (for Jasmine spy details)
       } );
     });
 
@@ -42,7 +42,9 @@ describe("Testing Controller", function () {
        expect(data.length).toBe(1);
        expect(data[0].productName).toBe("Chang");
        
-       console.log(productFactory.query.calls.argsFor(0));
+       // Jasmine enables all kinds of metadata about your calls
+       console.log(productFactory.query.calls.count()); // Number of calls
+       console.log(productFactory.query.calls.argsFor(0)); // Arguments for the first call
 
     });
 });
