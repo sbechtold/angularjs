@@ -7,7 +7,7 @@ Your test should veriy the call has occurred and verify that you have returned a
 
 describe("Testing Controller", function () {
 
-    var testScope, controllerService;
+    var testScope, controllerService, httpBackend;
 
     beforeEach( function () {
         module( 'myHttp' );
