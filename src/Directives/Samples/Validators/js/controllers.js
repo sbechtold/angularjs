@@ -29,6 +29,8 @@ angular.module("statesApp.controllers", ["statesApp.services"])
        }
        
        $scope.save = function () {
+           if ($scope.EditStates.$invalid)
+                return;
            $scope.state._id = $scope.state.abbreviation;
            $scope.state = stateService.save($scope.state);
            $scope.state.$promise.then(function (result) {

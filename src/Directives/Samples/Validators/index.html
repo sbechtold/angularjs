@@ -3,15 +3,18 @@
      <head>
         <title>States App</title>
         <link href="/common/css/bootstrap/bootstrap.css" type="text/css" rel="stylesheet"/>
-        
+        <link href="/common/css/bootstrap/bootstrap.callouts.css" type="text/css" rel="stylesheet"/>
         <style>
             input.ng-invalid.ng-dirty {
                 border-color: red;
             }    
+            
+            body {
+                margin-bottom:25pt;
+            }
         </style>
     </head>
     <body ng-controller="AppController" ng-view>
-         
         <script src="/common/js/angular/angular.js"></script>
         <script src="/common/js/angular-route/angular-route.js"></script>
         <script src="/common/js/angular-resource/angular-resource.js"></script>
