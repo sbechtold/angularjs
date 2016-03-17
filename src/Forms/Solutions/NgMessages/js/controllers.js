@@ -40,6 +40,8 @@ angular.module("productApp.controllers", ["ngMessages", "productApp.services"])
        };
       
        $scope.save = function () {
+           if ($scope.EditProducts.$invalid)
+                return;
            $scope.product = productService.save($scope.product);
            $scope.product.$promise.then(function (result) {
                 $scope.go("/");

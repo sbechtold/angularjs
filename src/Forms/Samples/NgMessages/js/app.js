@@ -1,4 +1,4 @@
-angular.module("statesApp", ["ngRoute", "ngMessages", "statesApp.controllers"])
+angular.module("statesApp", ["ngRoute", "ngMessages", "statesApp.controllers", "angularJsClass.directives"])
     .config(["$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
         $routeProvider
             .when("/", {
