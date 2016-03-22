@@ -1,5 +1,5 @@
 /*
-    Create a series of tests to verify that your Product Page has 
+    Create a series of tests to verify that your Product Page has
     successfully loaded
 */
 describe( 'Testing Our HTTP Page', function () {
@@ -14,10 +14,9 @@ describe( 'Testing Our HTTP Page', function () {
     it( 'testCase: Verify all have been loaded', function () {
       element.all( by.repeater( 'product in products' ) )
             .then( function ( products ) {
-            expect(products.length).toBe(78);
+            expect(products.length).toBe(77);
         });
-     
+
     } );
   } );
 } );
-

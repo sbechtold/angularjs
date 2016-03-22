@@ -1,4 +1,4 @@
-/* 
+/*
 Create 3 new validators
     One to verify the range of a given entry
     One to verity that we've entered a positive number
@@ -13,40 +13,40 @@ angular.module("productApp.directives", ["productApp.services"])
             link: function (scope, element, attrs, ngModelController) {
                 ngModelController.$validators.number = function(modelValue, viewValue) {
                     var value = parseInt(viewValue);
-                    if (!value) 
+                    if (!value)
                         return false;
-                        
+
                     return (value > 0);
                 }
             }
-            
+
         }
     }])
     .directive("range", [function () {
         return {
             restrict: 'A',
-            require: 'ngModel', 
+            require: 'ngModel',
             scope: {
                 upper:"=",
                 lower:"="
             },
             link: function (scope, element, attrs, ngModelController) {
-                
+
                 var upperBound = parseInt(scope.upper);
                 if (!upperBound) upperBound = 1000000;
-                
+
                 var lowerBound = parseInt(scope.lower);
-                if (!lowerBound) upperBound = -1000000;
-                
+                if (!lowerBound) lowerBound = -1000000;
+
                 ngModelController.$validators.range = function(modelValue, viewValue) {
                     var value = parseInt(viewValue);
-                    if (!value) 
+                    if (!value)
                         return false;
-                        
+
                     return (value < upperBound && value > lowerBound);
                 }
             }
-            
+
         }
     }])
     .directive("checkProductId", ["productService", "$q", function (productService, $q) {
@@ -55,7 +55,7 @@ angular.module("productApp.directives", ["productApp.services"])
             require: 'ngModel',
             link: function (scope, element, attrs, ngModelController) {
                 var initialValue;
-                ngModelController.$asyncValidators.checkAbbreviation = function(modelValue, viewValue) {
+                ngModelController.$asyncValidators.checkProductId = function(modelValue, viewValue) {
                     var defer = $q.defer();
                     var result = productService.getById(viewValue);
                     result.$promise.then(function(result) {
@@ -64,21 +64,21 @@ angular.module("productApp.directives", ["productApp.services"])
                            defer.resolve(true);
                            return;
                        }
-                       
+
                        if (!result.productID || result.productID == initialValue) {
                            defer.resolve();
                        }
                        else {
                            defer.reject();
                        }
-                        
+
                     })
                     .catch(function (err) {
-                       defer.reject(); 
+                       defer.reject();
                     });
                     return defer.promise;
                 }
             }
-            
+
         }
     }]);

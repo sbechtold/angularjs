@@ -8,11 +8,11 @@ app.controller("MainController", ["$scope", function ($scope) {
        { "Name":"Abigail", "Age":32, "Gender":"Female", "Id":5 },
        { "Name":"Doris", "Age":26, "Gender":"Female", "Id":6 },
        { "Name":"Jean", "Age":37, "Gender":"Male", "Id":7 }
-   ]; 
-   
+   ];
+
    // Doesn't have to be done this way; however, it acknowledges the use
    // of a variable by this name
    $scope.filter = {};
-   
-   
+
+
 }]);

@@ -26,5 +26,6 @@ angular.module( 'myHttpTest', ['myHttp', 'ngMockE2E'] )
             "dst": "NO"
         }];
 
+        //$httpBackend.whenGET(/http:\/\/localhost:9081\/States.*/ ).passThrough();
         $httpBackend.whenGET(/http:\/\/localhost:9081\/States.*/ ).respond(states);
     });

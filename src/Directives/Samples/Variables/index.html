@@ -13,7 +13,10 @@
         
         
         <h2>Isolate</h2>
-        <evaluator expression="myExpr" result="output"></evaluator>
+        <evaluator expression="myExpr" on-expression-change="updatedEvalution(myExpr)" 
+                   result="output"  on-result-change="valueDidChange(output)" 
+                   title="Type to evaluate your Expression">
+        </evaluator>
         <br />
         
         <h4>Result from evaluator: {{output}}</h4>

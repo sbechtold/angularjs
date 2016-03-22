@@ -27,15 +27,15 @@ angular.module("productApp.controllers", [])
            method:"GET",
            cache: true
        }).then(function (result) {
-          $scope.products = result.data; 
+          $scope.products = result.data;
        }).catch(function (err) {
            console.error("An error occured fetching products", err);
        });
-       
+
        $scope.selectProduct = function (product) {
            $scope.go("/details/" + product.productID);
        };
-       
+
        $scope.clearCache = function () {
            $scope.productCache.removeAll();
        };
@@ -46,7 +46,7 @@ angular.module("productApp.controllers", [])
            method:"GET",
            cache: $scope.productCache
        }).then(function (result) {
-          $scope.product = result.data; 
+          $scope.product = result.data;
        }).catch(function (err) {
            console.error("An error occured fetching states", err);
        });

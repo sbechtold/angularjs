@@ -1,6 +1,6 @@
 var app = angular.module("myEventHandlers", []);
 
-app.controller("MainController", ["$scope", "filterFilter", function ($scope, filterFilter) {
+app.controller("MainController", ["$scope", "filterFilter", "orderByFilter", function ($scope, filterFilter, orderBy) {
    $scope.people = [
        { "Name":"Bob", "Age":23, "Gender":"Male", "Id":1 },
        { "Name":"Chuck", "Age":31, "Gender":"Male", "Id":2 },
@@ -11,6 +11,7 @@ app.controller("MainController", ["$scope", "filterFilter", function ($scope, fi
        { "Name":"Jean", "Age":37, "Gender":"Male", "Id":7 }
    ];
 
+   $scope.people = orderBy($scope.people, "Name", true);
    $scope.addPerson = {}; // Set an empty object
 
    $scope.handleEvent = function (evt) {

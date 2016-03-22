@@ -8,7 +8,7 @@ You should (at a minimum) test the all() service method
 
 describe("Testing Controller", function () {
 
-    var productService;
+    var productService, productFactory;
     beforeEach( function () {
         module( 'productApp.factories', function ( $provide ) {
              $provide.factory( 'productFactory', function (  ) {
@@ -31,15 +31,20 @@ describe("Testing Controller", function () {
             });
 
         module( 'productApp.services' );
-        inject( function ( _productService_ ) {
-            productService = _productService_;
+        inject( function ( _productService_ , _productFactory_) {
+            productService = _productService_; // Reference the injected service
+            productFactory = _productFactory_; // Reference the injected factory (for Jasmine spy details)
       } );
     });
 
-    it("test fetch products", function () {
+    it("testCase: test all()", function () {
        var data = productService.all();
        expect(data.length).toBe(1);
        expect(data[0].productName).toBe("Chang");
+       
+       // Jasmine enables all kinds of metadata about your calls
+       console.log(productFactory.query.calls.count()); // Number of calls
+       console.log(productFactory.query.calls.argsFor(0)); // Arguments for the first call
 
     });
 });

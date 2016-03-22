@@ -39,17 +39,17 @@
                 </div>
                 <div class="radio">
                 <label>
-                    <input type="radio" name="discontinued" id="isDiscontinued" value="true" ng-model="product.discontinued">
+                    <input type="radio" name="discontinued" id="isDiscontinued" ng-value="true" ng-model="product.discontinued">
                     This product has been discontinued
                 </label>
                 </div>
                 <div class="radio">
                 <label>
-                    <input type="radio" name="discontinued" id="isNotDiscontinued" value="false" ng-model="product.discontinued">
+                    <input type="radio" name="discontinued" id="isNotDiscontinued" ng-value="false" ng-model="product.discontinued">
                     This product is stil active
                 </label>
                 </div>
-                <button type="submit" class="btn btn-primary pull-right" ng-click="save()">Submit</button>
+                <button type="submit" class="btn btn-primary pull-right" ng-submit ng-click="save()">Submit</button>
                 <button type="submit" class="btn btn-danger" ng-click="delete()" ng-disabled="!isUpdating">Delete</button>
                  <button type="submit" class="btn btn-default" ng-click="go('/')">Cancel</button>
             </form>

@@ -12,9 +12,9 @@
 
 <h2>Order By:</h2>
     <ul>
-    <li>Sort On: <select name="order" ng-options="one for one in availableForSort track by one" ng-model="sortOn"></select></li>
-    <li>Direction:  <input type="radio" ng-model="sortDirection" name="asc" id="asc" ng-value="false" />
+    <li>Sort On: <select name="order" ng-options="one for one in availableForSort track by one" ng-model="sort.on"></select></li>
+    <li>Direction:  <input type="radio" ng-model="sort.direction" name="asc" ng-value="false" />
                     <label for="asc">Asc</label>
-                    <input type="radio" ng-model="sortDirection" name="desc" id="desc" ng-value="true" />
+                    <input type="radio" ng-model="sort.direction" name="desc" ng-value="true" />
                     <label for="desc">Desc</label></li>
 </ul>

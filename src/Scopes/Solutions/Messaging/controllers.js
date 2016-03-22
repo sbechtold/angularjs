@@ -1,5 +1,5 @@
 /*
-    
+
     Create messaging so that a team can be selected from the ListController
     and then displayed in the Team Controller
 
@@ -15,20 +15,20 @@ app.controller("ParentController", ["$scope", function ($scope) {
        { "Name":"Cubs", "League":"NL", "Division":"Central", "Wins":70, "Loses":90, "Id":4 },
        { "Name":"Reds", "League":"NL", "Division":"Central", "Wins":85, "Loses":75, "Id":5 }
    ];
-   
-   $scope.$on("teamWasSelected", function (event, p) {
-      $scope.$broadcast("teamDidChange", p); 
+
+   $scope.$on("teamWasSelected", function (event, p ) {
+      $scope.$broadcast("teamDidChange", p);
    });
 }]);
 
 app.controller("ListController", ["$scope", function ($scope) {
    $scope.selectTeam = function (team) {
-     $scope.$emit("teamWasSelected", team);  
+     $scope.$emit("teamWasSelected", team);
    };
 }]);
 
 app.controller("TeamController", ["$scope", function ($scope) {
    $scope.$on("teamDidChange", function (event, p) {
-      $scope.team = p; 
+      $scope.team = p;
    });
 }]);

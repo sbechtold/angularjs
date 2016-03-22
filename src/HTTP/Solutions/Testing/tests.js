@@ -6,9 +6,9 @@ Your test should veriy the call has occurred and verify that you have returned a
 */
 
 describe("Testing Controller", function () {
-    
-    var testScope, controllerService;
-    
+
+    var testScope, controllerService, httpBackend;
+
     beforeEach( function () {
         module( 'myHttp' );
         inject( function ( $controller, $rootScope, $httpBackend ) {
@@ -30,17 +30,17 @@ describe("Testing Controller", function () {
                             "discontinued": false
                         },
                 ]);
-            
-            
+
+
             testScope = $rootScope.$new();
         });
     });
-    
+
     it("test fetch products", function () {
         controllerService( 'MainController', { $scope : testScope } );
         httpBackend.flush();
-        
+
         expect(testScope.products.length).toBe(1);
-        expect(testScope.products[0].productName).toBe("Chai");        
+        expect(testScope.products[0].productName).toBe("Chai");
     });
 });

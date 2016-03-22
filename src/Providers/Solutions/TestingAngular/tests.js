@@ -28,6 +28,16 @@ describe("Testing Controller", function () {
                     query : function () {
                     return data;
                   },
+                  get:function(query) {
+                      var result;
+                      data.forEach(function(one) {
+                          if (one._id == query.id) {
+                              result = one;
+                          }
+                      });
+
+                    return result;
+                  },
                   update:function(one) {
                     data[0] = one;
                     return one;
@@ -41,10 +51,29 @@ describe("Testing Controller", function () {
       } );
     });
 
-    it("test fetch products", function () {
+    it("testCase: Testing All()", function () {
        var data = productService.all();
        expect(data.length).toBe(1);
        expect(data[0].productName).toBe("Chang");
 
+    });
+
+    it("testCase: Testing Update()", function () {
+       var data = productService.all();
+       expect(data.length).toBe(1);
+       expect(data[0].productName).toBe("Chang");
+       data[0].productName = "test";
+
+       var actual = productService.save(data[0]);
+       //expect(actual.productName).toBe("test");
+
+       actual.$promise.then(function(val) {
+           expect(val.productName).toBe("test");
+           expect(actual.productName).toBe("test");
+       });
+
+
+       data = productService.all();
+       expect(data[0].productName).toBe("test");
     });
 });

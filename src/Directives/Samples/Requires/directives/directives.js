@@ -4,12 +4,15 @@ angular.module("myApp.directives", [])
             templateUrl:"directives/partials/pane-template.html",
             restrict:"E",
             transclude:true,
-            require: '^^container',
+            require: '?^^container',
             scope: {
                 header:"="
             },
             link: function (scope, element, attrs, containerController) {
-                containerController.addPane( scope );
+                if (containerController)
+                    containerController.addPane( scope );
+                else
+                    scope.selected = true;
             }
         };
     }])
@@ -22,8 +25,8 @@ angular.module("myApp.directives", [])
             controller: function ( $scope ) {
                 var panes = $scope.panes = [];
                 $scope.select = function ( pane ) {
-                    panes.forEach( function ( pane ) {
-                        pane.selected = false;
+                    panes.forEach( function ( one ) {
+                        one.selected = false;
                     } );
                     pane.selected = true;
                 };

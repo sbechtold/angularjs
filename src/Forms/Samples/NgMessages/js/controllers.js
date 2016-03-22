@@ -29,21 +29,24 @@ angular.module("statesApp.controllers", ["statesApp.services"])
        }
        
        $scope.save = function () {
-           debugger;
-           $scope.state._id = $scope.state.abbreviation;
-           $scope.state = stateService.save($scope.state);
-           $scope.state.$promise.then(function (result) {
-                $scope.go("/");
-                }).catch(function (params) {
-                    console.error("An error occurred deleting a state"); 
-                });
+           if ($scope.EditStates.$valid) {
+                $scope.state._id = $scope.state.abbreviation;
+                $scope.state = stateService.save($scope.state);
+                $scope.state.$promise.then(function (result) {
+                        $scope.go("/");
+                        }).catch(function (params) {
+                            console.error("An error occurred deleting a state"); 
+                        });
+           }
        };
       
        $scope.delete = function () {
-           stateService.delete($scope.state).then(function (res) {
-               $scope.go("/");
-           }).catch(function (params) {
-                console.error("An error occurred deleting a state"); 
-            });
+           if ($scope.EditStates.$valid) {
+            stateService.delete($scope.state).then(function (res) {
+                $scope.go("/");
+            }).catch(function (params) {
+                    console.error("An error occurred deleting a state"); 
+                });
+           }
        };
    }]);

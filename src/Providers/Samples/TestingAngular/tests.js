@@ -23,9 +23,8 @@ describe("Testing Controller", function () {
             });
 
         module( 'statesApp.services' );
-        inject( function ( _stateService_, _$controller_ ) {
+        inject( function ( _stateService_, $controller ) {
             stateService = _stateService_;
-            $controller = _$controller_
       } );
     });
 

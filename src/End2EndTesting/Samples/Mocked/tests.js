@@ -12,7 +12,7 @@ describe( 'Testing highlight-match.html', function () {
     it( 'testCase: check all states', function () {
       element.all( by.repeater( 'state in states' ) )
       .then( function ( names ) {
-        count = ;        expect(names.length).toBe(2);
+        count = expect(names.length).toBe(2);
       } );
     } );
     

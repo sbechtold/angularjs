@@ -1,10 +1,12 @@
 angular.module("filterApp.filters", [])
     .filter("overTheHill", [function() {
-        return function(data) {
+
+      var ageMax = 30;
+      return function(data) {
             var result = [];
 
             data.forEach(function(one) {
-                if (one.Age >= 30) {
+                if (one.Age >= ageMax) {
                     result.push(one);
                 }
             });

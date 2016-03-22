@@ -2,7 +2,7 @@
 
 exports.config = {
   seleniumAddress   : 'http://localhost:4444/wd/hub',
-  specs             : ['tests.js', 'better-protractor-spec.js'],
+  specs             : ['tests.js'],
 
   // Exclude files if needed
   exclude: [],

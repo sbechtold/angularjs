@@ -6,18 +6,15 @@ describe( 'Testing highlight-match.html', function () {
     beforeEach( function () {
       browser.get( URL );
 
-      
+
     } );
 
-    it( 'should add a name', function () {
-      var nameList = element.all( by.repeater( 'state in states' ) );
-      var count;
-      nameList.then( function ( names ) {
-        count = names.length;
-        expect(count).toBe(50);
+    it( 'get the list of states', function () {
+      var promise  = element.all( by.repeater( 'state in states' ) );
+      promise.then( function ( list ) {
+        expect(list.length).toBe(50);
       } );
-     
+
     } );
   } );
 } );
-
