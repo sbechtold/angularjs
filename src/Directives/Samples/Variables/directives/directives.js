@@ -26,19 +26,26 @@ angular.module("myApp.directives", [])
             restrict:"E",
             scope: {
                 expression:"=",
-                output:"=result"
+                output:"=result",
+                expressionDidChange:"&onExpressionChange",
+                resultDidChange:"&onResultChange",
+                title:"@"
             },
             link: function (scope, element, attrs) {
                 element.find("input").on("keyup", function (evt) {
                     scope.expression = $(this).val();
                     scope.$apply(); // Need to do this to persist changes
+                    if (typeof scope.expressionDidChange == "function")
+                        scope.expressionDidChange();
                 });
                 
                 element.find("button").on("click", function () {
                     scope.output = scope.$eval(scope.expression);
-                    element.find("code").html(scope.output);
-                    
+                    element.find("code").html((scope.output) ? scope.output : "Expression '" + scope.expression +"' is invalid and cannot be evaluated");
                     scope.$apply(); // Need to do this to make sure that our changes get persisted.
+                    
+                    if (typeof scope.resultDidChange == "function")
+                        scope.resultDidChange();
                 });
             }
         };

@@ -25,8 +25,8 @@ angular.module("myApp.directives", [])
             controller: function ( $scope ) {
                 var panes = $scope.panes = [];
                 $scope.select = function ( pane ) {
-                    panes.forEach( function ( pane ) {
-                        pane.selected = false;
+                    panes.forEach( function ( one ) {
+                        one.selected = false;
                     } );
                     pane.selected = true;
                 };

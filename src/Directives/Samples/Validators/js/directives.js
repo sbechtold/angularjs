@@ -54,7 +54,7 @@ angular.module("statesApp.directives", ["statesApp.services"])
                     result.$promise.then(function(result) {
                        if (!initialValue) {
                            initialValue = viewValue;
-                           defer.resolve(true);
+                           defer.resolve();
                            return;
                        }
 

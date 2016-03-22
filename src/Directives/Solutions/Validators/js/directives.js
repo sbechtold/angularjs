@@ -36,7 +36,7 @@ angular.module("productApp.directives", ["productApp.services"])
                 if (!upperBound) upperBound = 1000000;
 
                 var lowerBound = parseInt(scope.lower);
-                if (!lowerBound) upperBound = -1000000;
+                if (!lowerBound) lowerBound = -1000000;
 
                 ngModelController.$validators.range = function(modelValue, viewValue) {
                     var value = parseInt(viewValue);
