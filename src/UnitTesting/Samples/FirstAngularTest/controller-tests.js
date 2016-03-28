@@ -1,4 +1,4 @@
-describe("Testing Controller", function () {
+describe("TestFixture: Controller", function () {
 
     var testScope, personToDelete, numberOfPeople;
 
@@ -15,18 +15,25 @@ describe("Testing Controller", function () {
     it("testCase: remove(one)", function () {
         expect(testScope.people.length).toBe(numberOfPeople);
 
+        expect(testScope.people).toContain(personToDelete);
         testScope.remove(personToDelete);
 
+        expect(testScope.people).not.toContain(personToDelete);
         expect(testScope.people.length).toBe(numberOfPeople - 1);
 
     });
 
-    it("test add a person", function () {
+    it("testCase: Add a person", function () {
         var person = { "Name":"Jacob", "Age":31, "Gender":"Male", "Id":8 };
         expect(testScope.people.length).toBe(numberOfPeople);
 
-        testScope.add(person);
-
+        testScope.addPerson = person;
+        expect(testScope.people).not.toContain(person);
+        
+        testScope.add();
+        expect(testScope.addPerson).toEqual({});
+        
+        expect(testScope.people).toContain(person);
         expect(testScope.people.length).toBe(numberOfPeople + 1);
     });
 });
