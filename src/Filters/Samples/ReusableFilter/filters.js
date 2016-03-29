@@ -1,7 +1,7 @@
 angular.module("filterApp.filters", [])
     .filter("overTheHill", [function() {
 
-      var ageMax = 30;
+      var ageMax = 40;
       return function(data) {
             var result = [];
 

@@ -5,7 +5,7 @@ describe("Testing Filters", function () {
                 { "Name":"Chuck", "Age":42, "Gender":"Male", "Id":2 },
                 { "Name":"John", "Age":25, "Gender":"Male", "Id":3 }];
 
-    describe("Test Local Filter", function () {
+    describe("testFixture: Local Filter", function () {
         beforeEach( function () {
             module( 'filterApp' );
             inject( function ( $controller, $rootScope ) {
@@ -25,7 +25,7 @@ describe("Testing Filters", function () {
         });
     });
 
-    describe("Test Reusable Filter", function () {
+    describe("testFixture: Reusable Filter", function () {
         var filter;
         beforeEach( function () {
             module( 'filterApp.filters' );
@@ -41,7 +41,7 @@ describe("Testing Filters", function () {
         });
     });
 
-    describe("Test Complex Reusable Filter", function () {
+    describe("testFixture: Complex Reusable Filter", function () {
         var filter;
         beforeEach( function () {
             module( 'complexFilterApp.filters' );
