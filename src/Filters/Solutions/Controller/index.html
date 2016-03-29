@@ -5,7 +5,7 @@
     </head>
     <body ng-controller="ListController">
         <h1>Event Handlers</h1>
-         
+
         <table>
             <thead>
                 <tr>
@@ -35,16 +35,16 @@
                     <td><input type="text" ng-model="newTeam.Name" /></td>
                     <td><input type="text" ng-model="newTeam.League" /></td>
                     <td><input type="text" ng-model="newTeam.Division" /></td>
-                    <td><input type="text" ng-model="newTeam.Wins" /></td>
-                    <td><input type="text" ng-model="newTeam.Loses" /></td>
+                    <td><input type="number" ng-model="newTeam.Wins" /></td>
+                    <td><input type="number" ng-model="newTeam.Loses" /></td>
                 </tr>
             </tfoot>
         </table>
-        
+
         <div>
             {{lastEvent}}
         </div>
-       
+
         <script src="/common/js/angular/angular.js"></script>
         <script src="controllers.js"></script>
     </body>
