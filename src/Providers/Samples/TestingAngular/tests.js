@@ -1,6 +1,6 @@
 describe("Testing Controller", function () {
 
-    var stateService;
+    var myService;
     beforeEach( function () {
         module( 'statesApp.factories', function ( $provide ) {
              $provide.factory( 'stateFactory', function ( $log ) {
@@ -23,13 +23,13 @@ describe("Testing Controller", function () {
             });
 
         module( 'statesApp.services' );
-        inject( function ( _stateService_, $controller ) {
-            stateService = _stateService_;
+        inject( function ( stateService ) {
+            myService = stateService;
       } );
     });
 
     it("test fetch states", function () {
-       var data = stateService.all();
+       var data = myService.all();
        expect(data.length).toBe(1);
        expect(data[0].name).toBe("ALASKA");
 
