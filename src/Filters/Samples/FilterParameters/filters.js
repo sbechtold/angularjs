@@ -6,11 +6,11 @@ Suppose this object:
 
 var car = { NumberOfWheels: 4, Make: "Ford", Model: "Focus", Year: 2013 };
 
-These properties can be referenced either by name: 
+These properties can be referenced either by name:
 
     car.NumberOfWheels ==> returns "4"
-    car.Make ==> returns "Ford" 
-    
+    car.Make ==> returns "Ford"
+
 Or by Key
 
     car["NumberOfWheels"] ==> returns "4"
@@ -28,12 +28,12 @@ angular.module("complexFilterApp.filters", [])
     .filter("greaterThan", [function() {
         return function(data, minimum, propertyName) {
             var result = [];
-            
+
             var value = parseInt(minimum);
             if (!value) {
                 value = -1000000;
             }
-                        
+
             data.forEach(function(one) {
                 var propertyValue = one[propertyName]; // SEE NOTE ABOVE
                 if (propertyValue) {
@@ -41,23 +41,23 @@ angular.module("complexFilterApp.filters", [])
                     if (propertyValue && propertyValue > value) {
                         result.push(one);
                     }
-                } 
+                }
                 else if (one > value) {
                     result.push(one);
                 }
             });
-            return result;  
+            return result;
         }
-    }])    
+    }])
     // Let's take a look at a filter that has a dependency on another filter
     .filter("checkValue", ["filterFilter", function(filterFilter) {
         return function(data, propertyName, propertyValue) {
             if (!propertyName || !propertyValue || !data || !data.length)
                 return data;
-            
+
             var filter = {};
             filter[propertyName] = propertyValue;
-            
+
             return filterFilter(data, filter);
         }
     }]);;
