@@ -5,9 +5,9 @@
     </head>
     <body ng-controller="MainController">
         <h1>Filter Controller</h1>
-        <h2>Filter Array: <input type="text" ng-model="simpleFilter" /></h2>
-        
-        
+        <h2>Filter Array: <input type="text" ng-model="criteria" /></h2>
+
+
         <table>
             <thead>
                 <tr>
@@ -17,16 +17,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="one in people | filter:simpleFilter">
+                <tr ng-repeat="one in people | filter:criteria">
                     <td>{{one.Name}}</td>
                     <td>{{one.Age}}</td>
                     <td>{{one.Gender}}</td>
                 </tr>
             </tbody>
         </table>
-        
+
         <h4 ng-show="simpleFilter">Table is being filtered by: {{simpleFilter}}</h4>
-            
+
         <script src="/common/js/angular/angular.js"></script>
         <script src="controllers.js"></script>
     </body>
