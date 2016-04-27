@@ -2,14 +2,11 @@ angular.module("myUIRouter", ["ui.router", "myUIRouter.controllers"])
     .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
          $stateProvider.state( 'search', {
                 url         : '/',
-                templateUrl : 'pages/search.html',
-                //controller: 'CustomerDetailCtrl'
+                templateUrl : 'pages/search.html'
             } )
             .state( 'search.list', {
                 url         : '/list',
-                templateUrl : 'pages/list.html',
-                //controller: 'CustomerDetailCtrl'
-
+                templateUrl : 'pages/list.html'
             } )
             .state( 'search.list.detail', {
                 url         : '/details/:id',

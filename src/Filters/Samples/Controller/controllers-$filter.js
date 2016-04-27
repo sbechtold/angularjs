@@ -17,6 +17,11 @@ app.controller("MainController", ["$scope", "$filter", function ($scope, $filter
        $scope.lastEvent = evt.type;
    };
 
+   var orderArray = function() {
+     var orderBy = $filter("orderBy");
+     $scope.people = orderBy($scope.people, "Name", true);
+   };
+   orderArray();
 
    $scope.remove = function (person, evt) {
      $scope.handleEvent(evt);
@@ -41,6 +46,6 @@ app.controller("MainController", ["$scope", "$filter", function ($scope, $filter
 
      $scope.people.push($scope.addPerson);
      $scope.addPerson = {};
-
+     orderArray();
    };
 }]);
