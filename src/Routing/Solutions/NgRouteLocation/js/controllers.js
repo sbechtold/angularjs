@@ -11,12 +11,12 @@ angular.module("myNgRouter.controllers", ["myNgRouter.filters"])
                     { "Name":"Brewers", "League":"NL", "Division":"Central", "Wins":78, "Loses":82, "Id":3 },
                     { "Name":"Cubs", "League":"NL", "Division":"Central", "Wins":70, "Loses":90, "Id":4 },
                     { "Name":"Reds", "League":"NL", "Division":"Central", "Wins":85, "Loses":75, "Id":5 }
-                ]; 
+                ];
         $scope.move = function (path) {
             $location.path(path)
         };
    }])
-   .controller("HomeController", ["$scope" , function($scope, findByIdFilter) {
+   .controller("HomeController", ["$scope" , function($scope) {
 
    }])
    .controller("DetailController", ["$scope" , "findByIdFilter", "$routeParams", function($scope, findByIdFilter, $routeParams) {
