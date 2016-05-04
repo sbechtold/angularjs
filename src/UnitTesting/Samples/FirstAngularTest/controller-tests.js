@@ -29,10 +29,10 @@ describe("TestFixture: Controller", function () {
 
         testScope.addPerson = person;
         expect(testScope.people).not.toContain(person);
-        
+
         testScope.add();
         expect(testScope.addPerson).toEqual({});
-        
+
         expect(testScope.people).toContain(person);
         expect(testScope.people.length).toBe(numberOfPeople + 1);
     });

@@ -9,5 +9,5 @@ angular.module("myHttp", [])
             $scope.states = result.data;
         }).catch(function (result) {
             console.log("An error has occurred");
-        });  
+        });
     }]);

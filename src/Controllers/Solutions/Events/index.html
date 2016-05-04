@@ -29,11 +29,11 @@
                 </tr>
             </tbody>
             <!--
-                Add input fields to collect data from the user to successfully add a 
+                Add input fields to collect data from the user to successfully add a
                 new team to the list
-                
+
                 Remember: Winning percentage is calculated so we don't need to get that from the user
-                --> 
+                -->
             <tfoot>
                 <tr>
                     <td><input type="button" value="+" ng-click="addTeam()" />
@@ -45,13 +45,13 @@
                 </tr>
             </tfoot>
         </table>
-        
-        <!-- 
+
+        <!--
             Add a button to restore all teams that should only be visible if
             there are teams that need restored
             -->
         <input type="button" value="Restore Deleted Teams" ng-if="deleted.length > 0" ng-click="restoreAll()" />
-           
+
         <script src="/common/js/angular/angular.js"></script>
         <script src="controllers.js"></script>
     </body>

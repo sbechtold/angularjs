@@ -17,11 +17,8 @@ app.controller("MainController", ["$scope", "$filter", function ($scope, $filter
        $scope.lastEvent = evt.type;
    };
 
-   var orderArray = function() {
-     var orderBy = $filter("orderBy");
-     $scope.people = orderBy($scope.people, "Name", true);
-   };
-   orderArray();
+   var orderBy = $filter("orderBy");
+   $scope.people = orderBy($scope.people, "Name", true);
 
    $scope.remove = function (person, evt) {
      $scope.handleEvent(evt);
@@ -37,7 +34,6 @@ app.controller("MainController", ["$scope", "$filter", function ($scope, $filter
      var filter = { Name:$scope.addPerson.Name };
 
      var filterFilter = $filter("filter");
-
      var result = filterFilter($scope.people, filter);
      if (result && result.length > 0) {
          console.error("An element with the given name is already present within array. Cannot add new person");
@@ -46,6 +42,5 @@ app.controller("MainController", ["$scope", "$filter", function ($scope, $filter
 
      $scope.people.push($scope.addPerson);
      $scope.addPerson = {};
-     orderArray();
    };
 }]);
