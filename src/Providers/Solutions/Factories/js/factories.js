@@ -15,5 +15,4 @@ angular.module("productApp.factories", ["ngResource"])
                 method: 'PUT' // this method issues a PUT request
                 }
        });
-    }])
-    
+    }]);

@@ -21,8 +21,8 @@ angular.module("statesApp.services", ["statesApp.factories"])
             var result = { $promise: deferred.promise, $resolved:false};
 
             one._id = one.abbreviation;
-            stateFactory.get({id:one._id}, function (result) {
-                if (result && result._id) {
+            stateFactory.get({id:one._id}, function (response) {
+                if (response && response._id) {
                     one.$update(function (obj) {
                         angular.extend(result, one);
                         deferred.resolve(one);

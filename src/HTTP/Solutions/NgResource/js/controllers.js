@@ -64,7 +64,7 @@ angular.module("productApp.controllers", ["ngResource"])
        };
 
        $scope.save = function () {
-           if ($routeParams.id) {
+           if ($scope.isUpdating) {
                $scope.product.$update(function (params) {
                    $scope.go("/");
                }).catch(function (params) {

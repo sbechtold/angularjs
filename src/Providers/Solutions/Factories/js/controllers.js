@@ -1,9 +1,9 @@
-/*  
+/*
     Refactor all of the $resource calls to use the newly created factory
     Make sure you add a dependency to your factory
 */
 angular.module("productApp.controllers", ["productApp.factories"])
-   .controller("AppController", ["$scope", "$location", "productFactory", function ($scope, $location, productFactory) {
+   .controller("AppController", ["$scope", "$location", function ($scope, $location) {
        $scope.go = function (path) {
            $location.path(path);
        };
@@ -11,9 +11,9 @@ angular.module("productApp.controllers", ["productApp.factories"])
    .controller("ListController", ["$scope" , "productFactory", function($scope, productFactory) {
        $scope.products = productFactory.query();
        $scope.products.$promise.catch(function (params) {
-          console.error("An error occurred querying server"); 
+          console.error("An error occurred querying server");
        });
-       
+
        $scope.selectProduct = function (product) {
            $scope.go("/details/" + product.productID);
        };
@@ -25,34 +25,34 @@ angular.module("productApp.controllers", ["productApp.factories"])
                 $scope.isUpdating = true;
             });
             $scope.product.$promise.catch(function (params) {
-                console.error("An error occurred fetching product"); 
+                console.error("An error occurred fetching product");
             });
        }
        else {
            $scope.product = new productFactory();
        }
-       
+
        $scope.delete = function () {
          $scope.product.$delete(function (params) {
              $scope.go("/");
          }).catch(function (params) {
-            console.error("An error occurred deleting a product"); 
+            console.error("An error occurred deleting a product");
         });
        };
-      
+
        $scope.save = function () {
            if ($routeParams.id) {
                $scope.product.$update(function (params) {
                    $scope.go("/");
                }).catch(function (params) {
-                  console.error("An error occured updating product"); 
+                  console.error("An error occured updating product");
                });
            }
            else {
                $scope.product.$save(function (params) {
                    $scope.go("/");
                }).catch(function (params) {
-                  console.error("An error occured saving product"); 
+                  console.error("An error occured saving product");
                });
            }
        };

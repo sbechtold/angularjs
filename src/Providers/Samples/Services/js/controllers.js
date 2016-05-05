@@ -7,9 +7,9 @@ angular.module("statesApp.controllers", ["statesApp.services"])
    .controller("ListController", ["$scope" , "stateService", function($scope, stateService) {
        $scope.states = stateService.all();
        $scope.states.$promise.catch(function (params) {
-          console.error("An error occurred querying server"); 
+          console.error("An error occurred querying server");
        });
-       
+
        $scope.selectState = function (state) {
            $scope.go("/details/" + state._id);
        };
@@ -21,28 +21,27 @@ angular.module("statesApp.controllers", ["statesApp.services"])
             $scope.state.$promise.then(function(res) {
                 if (res) $scope.isUpdating = true;
             }).catch(function (params) {
-                console.error("An error occurred fetching state"); 
+                console.error("An error occurred fetching state");
             });
        }
        else {
            $scope.state = stateService.build();
        }
+
+       $scope.delete = function () {
+           stateService.delete($scope.state).then(function (res) {
+               $scope.go("/");
+           }).catch(function (params) {
+                console.error("An error occurred deleting a state");
+            });
+       };
        
        $scope.save = function () {
            $scope.state = stateService.save($scope.state);
            $scope.state.$promise.then(function (result) {
                 $scope.go("/");
                 }).catch(function (params) {
-                    console.error("An error occurred deleting a state"); 
+                    console.error("An error occurred deleting a state");
                 });
-       };
-       
-       
-       $scope.delete = function () {
-           stateService.delete($scope.state).then(function (res) {
-               $scope.go("/");
-           }).catch(function (params) {
-                console.error("An error occurred deleting a state"); 
-            });
        };
    }]);

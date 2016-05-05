@@ -41,7 +41,7 @@ describe("Testing Controller", function () {
        var data = productService.all();
        expect(data.length).toBe(1);
        expect(data[0].productName).toBe("Chang");
-       
+
        // Jasmine enables all kinds of metadata about your calls
        console.log(productFactory.query.calls.count()); // Number of calls
        console.log(productFactory.query.calls.argsFor(0)); // Arguments for the first call
