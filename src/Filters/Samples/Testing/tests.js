@@ -38,6 +38,7 @@ describe("Testing Filters", function () {
             var result = filter(data);
             expect(result.length).toBe(1);
             expect(result).toContain({ "Name":"Chuck", "Age":42, "Gender":"Male", "Id":2 });
+            expect(result).toContain(data[1]);
         });
     });
 

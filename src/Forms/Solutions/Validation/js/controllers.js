@@ -1,4 +1,4 @@
-/*  
+/*
     Refactor all of the factory calls for service calls
 */
 angular.module("productApp.controllers", ["productApp.services"])
@@ -10,9 +10,9 @@ angular.module("productApp.controllers", ["productApp.services"])
    .controller("ListController", ["$scope" , "productService", function($scope, productService) {
        $scope.products = productService.all();
        $scope.products.$promise.catch(function (params) {
-          console.error("An error occurred querying server"); 
+          console.error("An error occurred querying server");
        });
-       
+
        $scope.selectProduct = function (product) {
            $scope.go("/details/" + product.productID);
        };
@@ -24,27 +24,27 @@ angular.module("productApp.controllers", ["productApp.services"])
             $scope.product.$promise.then(function (res) {
                 $scope.isUpdating = true;
             }).catch(function (params) {
-                console.error("An error occurred fetching product"); 
+                console.error("An error occurred fetching product");
             });
        }
        else {
            $scope.product = productService.build();
        }
-       
+
        $scope.delete = function () {
            productService.delete($scope.product).then(function (res) {
                $scope.go("/");
            }).catch(function (params) {
-                console.error("An error occurred deleting a product"); 
+                console.error("An error occurred deleting a product");
             });
        };
-      
+
        $scope.save = function () {
            $scope.product = productService.save($scope.product);
            $scope.product.$promise.then(function (result) {
                 $scope.go("/");
             }).catch(function (params) {
-                console.error("An error occurred saving product"); 
+                console.error("An error occurred saving product");
             });
        };
    }]);

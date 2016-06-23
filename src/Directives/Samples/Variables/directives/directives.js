@@ -8,13 +8,13 @@ angular.module("myApp.directives", [])
                     console.log("Message has changed to: " + newValue);
                     element.find("ul.log").append("<li>" + oldValue + "</li>");
                 });
-                
-                element.find("button[name=addtime]").on("click", function (evt) { 
+
+                element.find("button[name=addtime]").on("click", function (evt) {
                     scope.message = scope.message + ":" + Date();
                     scope.$apply();
                 });
-                
-                element.find("button[name=clearlog]").on("click", function (evt) { 
+
+                element.find("button[name=clearlog]").on("click", function (evt) {
                     element.find("ul.log").empty();
                 });
             }
@@ -38,12 +38,12 @@ angular.module("myApp.directives", [])
                     if (typeof scope.expressionDidChange == "function")
                         scope.expressionDidChange();
                 });
-                
+
                 element.find("button").on("click", function () {
                     scope.output = scope.$eval(scope.expression);
                     element.find("code").html((scope.output) ? scope.output : "Expression '" + scope.expression +"' is invalid and cannot be evaluated");
                     scope.$apply(); // Need to do this to make sure that our changes get persisted.
-                    
+
                     if (typeof scope.resultDidChange == "function")
                         scope.resultDidChange();
                 });

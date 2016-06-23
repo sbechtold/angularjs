@@ -22,7 +22,7 @@ angular.module("myApp.directives", [])
             restrict:"E",
             transclude:true,
             scope:{},
-            controller: function ( $scope ) {
+            controller: ["$scope", function ( $scope ) {
                 var panes = $scope.panes = [];
                 $scope.select = function ( pane ) {
                     panes.forEach( function ( one ) {
@@ -37,7 +37,7 @@ angular.module("myApp.directives", [])
                     }
                     panes.push( pane );
                 };
-            },
+            }],
             link: function (scope, element, attrs) {
             }
         };

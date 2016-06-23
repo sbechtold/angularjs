@@ -5,7 +5,7 @@
 
 */
 describe("Testing Directives", function () {
-    var testScope, compile, testScope;
+    var testScope, compile;
 
    beforeEach( function () {
         module( 'myApp.directives' );
@@ -24,6 +24,14 @@ describe("Testing Directives", function () {
         expect( element.html() ).toContain( "Positive" );
     });
 
+    it('test negative number', function() {
+        testScope.number = -3;
+        var element = compile( '<positive-or-negative number="number"></positive-or-negative>' )( testScope );
+        testScope.$digest();
+        console.log(element.html());
+        expect( element.html() ).toContain( "Negative" );
+    });
+
     it('test change', function() {
         testScope.number = 3;
         var element = compile( '<positive-or-negative number="number"></positive-or-negative>' )( testScope );
@@ -37,13 +45,5 @@ describe("Testing Directives", function () {
         testScope.number = 13;
         testScope.$digest();
         expect( element.html() ).toContain( "Positive" );
-    });
-
-    it('test negative number', function() {
-        testScope.number = -3;
-        var element = compile( '<positive-or-negative number="number"></positive-or-negative>' )( testScope );
-        testScope.$digest();
-        console.log(element.html());
-        expect( element.html() ).toContain( "Negative" );
     });
 });

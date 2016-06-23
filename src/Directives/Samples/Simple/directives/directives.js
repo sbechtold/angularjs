@@ -1,7 +1,7 @@
 angular.module("myApp.directives", [])
     .directive("firstOne", [function () {
         return {
-            template:"This is the first One hee",
+            template:"This is the first One",
         };
     }])
     .directive("secondOne", [function () {
