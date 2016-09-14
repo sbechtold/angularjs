@@ -14,7 +14,9 @@ app.controller("MainController", ["$scope", function ($scope) {
    $scope.addPerson = {}; // Set an empty object
 
    $scope.handleEvent = function (evt) {
-       $scope.lastEvent = evt.type;
+     if (!evt)
+      return;
+    $scope.lastEvent = evt.type;
    };
 
 

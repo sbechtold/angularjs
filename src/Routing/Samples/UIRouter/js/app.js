@@ -6,7 +6,12 @@ angular.module("myUIRouter", ["ui.router", "myUIRouter.controllers"])
             } )
             .state( 'search.list', {
                 url         : '/list',
+                controller  : "ListController",
                 templateUrl : 'pages/list.html'
+            } )
+            .state( 'search.alt', {
+                url         : '/alt-list',
+                templateUrl : 'pages/alt-list.html'
             } )
             .state( 'search.list.detail', {
                 url         : '/details/:id',

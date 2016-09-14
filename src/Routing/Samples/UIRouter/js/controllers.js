@@ -8,11 +8,19 @@ angular.module("myUIRouter.controllers", ["myUIRouter.filters"])
             { "Name":"Abigail", "Age":32, "Gender":"Female", "Id":5 },
             { "Name":"Doris", "Age":26, "Gender":"Female", "Id":6 },
             { "Name":"Jean", "Age":37, "Gender":"Male", "Id":7 }
-        ]; 
-        
+        ];
+
         $scope.availableForSort = ["Name", "Age", "Gender"];
         $scope.sortOn = $scope.availableForSort[0];
         $scope.sortDirection = false;
+   }])
+   .controller("ListController", ["$scope", "$state", function($scope, $state) {
+
+        $scope.isSelected = false;
+        $scope.select = function(one) {
+          $state.go(".detail", {id:one});
+          $scope.isSelected = true;
+        };
    }])
    .controller("DetailController", ["$scope" , "findByIdFilter", "$stateParams", function($scope, findByIdFilter, $stateParams) {
        var results = findByIdFilter($scope.people, $stateParams.id);

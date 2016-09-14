@@ -1,1 +1,1 @@
-var app = angular.module("complexFilterApp", ["complexFilterApp.controllers"]);
+angular.module("complexFilterApp", ["complexFilterApp.controllers"]);

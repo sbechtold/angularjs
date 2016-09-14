@@ -14,9 +14,7 @@ describe("Testing Directives", function () {
 
     it('test echo directive', function() {
         var element = compile( '<echo say="text"></echo>' )( testScope );
-
-
-        testScope.$digest();
+        testScope.$apply();
         console.log(element.html());
         expect( element.html() ).toContain( testScope.text );
   });

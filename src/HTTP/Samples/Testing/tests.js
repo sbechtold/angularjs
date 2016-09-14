@@ -1,6 +1,6 @@
 describe("Testing Controller", function () {
 
-    var testScope, controllerService;
+    var testScope, controllerService, httpBackend;
 
     beforeEach( function () {
         module( 'myHttp' );

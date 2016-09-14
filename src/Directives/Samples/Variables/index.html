@@ -10,17 +10,21 @@
 
         <h2>Dependent</h2>
         <dependent></dependent>
-        
-        
+
+
         <h2>Isolate</h2>
-        <evaluator expression="myExpr" on-expression-change="updatedEvalution(myExpr)" 
-                   result="output"  on-result-change="valueDidChange(output)" 
+        <evaluator expression="myExpr"
+                   result="output"
+                   on-expression-change="updatedEvalution(myExpr)"
+                   on-result-change="valueDidChange(output)"
                    title="Type to evaluate your Expression">
         </evaluator>
         <br />
-        
+
         <h4>Result from evaluator: {{output}}</h4>
         <h4>Expression from evaluator: {{myExpr}}</h4>
+
+        <evaluator></evaluator>
 
         <script src="/common/js/jquery/jquery.js"></script>
         <script src="/common/js/angular/angular.js"></script>
