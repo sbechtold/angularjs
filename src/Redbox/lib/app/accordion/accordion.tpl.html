@@ -1,0 +1,13 @@
+<div class="row">
+    <uib-accordion close-others="true">
+        <uib-accordion-group ng-class="{'expanded': group.isOpen === true}" is-open="group.isOpen" data-ng-repeat="group in accordionCtrl.groups">
+            <uib-accordion-heading>
+                <i class="fa fa-md link-color fa-fw" ng-class="{'fa-angle-up': group.isOpen === true, 'fa-angle-down': group.isOpen === false}"></i>
+                <span class="panel-title-name">{{ group.name }}</span>
+            </uib-accordion-heading>
+            <div class="col-md-12">
+                <p>{{group.contentTitle}}</p>
+            </div>
+        </uib-accordion-group>
+    </uib-accordion>
+</div>

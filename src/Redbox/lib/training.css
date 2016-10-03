@@ -1,0 +1,234 @@
+.brand-primary-color {
+    color: #1a8099;
+    fill: #1a8099;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-bgcolor {
+    background-color: #1a8099;
+    fill: #1a8099;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-border-color {
+    border-color: #1a8099;
+    fill: #1a8099;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-lighter {
+    color: #25b6da;
+    fill: #25b6da;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-lighter-bgcolor {
+    background-color: #25b6da;
+    fill: #25b6da;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-lightest {
+    color: #67cce5;
+    fill: #67cce5;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-lightest-bgcolor {
+    background-color: #67cce5;
+    fill: #67cce5;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-darker {
+    color: #0f4958;
+    fill: #0f4958;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-darker-bgcolor {
+    background-color: #0f4958;
+    fill: #0f4958;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-darkest {
+    color: #041316;
+    fill: #041316;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-darkest-bgcolor {
+    background-color: #041316;
+    fill: #041316;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-spin-1 {
+    color: #1a6b99;
+    fill: #1a6b99;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-spin-2 {
+    color: #1a5699;
+    fill: #1a5699;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-spin-3 {
+    color: #1a4099;
+    fill: #1a4099;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.brand-primary-spin-4 {
+    color: #1a2b99;
+    fill: #1a2b99;
+}
+@media (min-width: 1200px) {
+    /* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+    .stage {
+        background-image: url("redbox/ext/branding/default/img/login-background.jpg");
+    }
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+body.onboarding .stage {
+    background-image: url("redbox/ext/branding/default/img/login-background.jpg");
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.stage.login {
+    background-image: url("redbox/ext/branding/default/img/login-background.jpg");
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.page-sidebar > ul.menu {
+    background-color: #0f4958;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.page-sidebar > ul.menu > li > div:before,
+.page-sidebar > ul.menu > li > a {
+    color: #ffffff;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.btn-primary {
+    background-color: #1a8099;
+    color: #ffffff;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.btn-primary:hover:not([disabled]) {
+    background-color: #25b6da;
+    color: #ffffff;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus {
+    background-color: #0f4958;
+    color: #ffffff;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+#login .powered-by-adp-logo {
+    color: #ffffff;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.top-header-ribbon {
+    border-top: 2px solid #1a8099;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.cover {
+    background-color: transparent;
+}
+@media (min-width: 1200px) {
+    /* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+    .cover .company-logo {
+        background-image: url("redbox/ext/branding/default/img/header-logo.jpg");
+    }
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+#side-toggle:hover {
+    color: #0f4958;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.top-actions .hdr-button:hover {
+    color: #25b6da;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.top-actions .hdr-button:active {
+    color: #041316;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.cover .powered-by-adp-logo {
+    color: #ffffff;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.adp-tabs.horizontal {
+    background-color: #1a8099;
+    color: #ffffff;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.adp-tabs.horizontal .adp-tabs-prev,
+.adp-tabs.horizontal .adp-tabs-next {
+    color: #ffffff;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.adp-tabs.horizontal .adp-tabs-prev {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1a8099', endColorstr='#001a8099', GradientType=1);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1a8099',endColorstr='#001a8099',GradientType=1);
+    background-image: linear-gradient(to right, #1a8099, rgba(26, 128, 153, 0));
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.adp-tabs.horizontal .adp-tabs-next {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001a8099', endColorstr='#ff1a8099', GradientType=1);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001a8099',endColorstr='#ff1a8099',GradientType=1);
+    background-image: linear-gradient(to left, #1a8099, rgba(26, 128, 153, 0));
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.adp-tabs.vertical > .tabs-container > ul > li:not(.active):hover {
+    color: #1a8099;
+    background-color: transparent;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.loading-indicator.adp-loading-indicator {
+    color: #1a8099;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-top-color: rgba(26, 128, 153, 0.2) !important;
+    border-right-color: rgba(26, 128, 153, 0.2) !important;
+    border-bottom-color: rgba(26, 128, 153, 0.2) !important;
+    border-left-color: #1a8099 !important;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.adp-loading-indicator {
+    color: #1a8099;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-top-color: rgba(26, 128, 153, 0.2) !important;
+    border-right-color: rgba(26, 128, 153, 0.2) !important;
+    border-bottom-color: rgba(26, 128, 153, 0.2) !important;
+    border-left-color: #1a8099 !important;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.no-cssgradients i.loader.loading-indicator,
+.no-cssgradients .manual-loading-indicator {
+    background-image: none;
+}
+@media (min-width: 992px) {
+    /* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+    .adp-tabs.vertical > .tabs-container > ul > li:hover,
+    .adp-tabs.vertical > .tabs-container > ul > li.active {
+        background-color: #1a8099;
+        color: #ffffff;
+    }
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.adp-wizard-branding-bar {
+    background-color: rgba(26, 128, 153, 0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#801a8099', endColorstr='#801a8099', GradientType=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#801a8099',endColorstr='#801a8099',GradientType=0);
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.adp-wizard-title-area .adp-wizard-progress {
+    border-color: #1a8099;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.ob-tile .ob-tile-icon {
+    border: 2px solid #1a8099;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.ob-tile .ob-tile-icon .fa {
+    color: #1a8099;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.onboarding .places-header .fa-map-marker {
+    color: #1a8099;
+}
+/* line 1, http://cdlrdboxsc005.es.ad.adp.com:98/static/redbox/app/framework/less/brandable.less?1.18.0.1594 */
+.onboarding .places-header .fa-map-marker:hover {
+    color: #25b6da;
+}

@@ -1,0 +1,130 @@
+/* COLORS according to Serafin's style guide palette */
+@white: #ffffff;
+@black: #000000;
+
+/* NEUTRALS (gray) (N1 - N4) from lightest to darkest */
+@neutral-lightest: whitesmoke;
+@neutral-lighter: #ebebeb;
+@neutral-light: #e4e4e4;
+@neutral: #d2d2d2;
+@neutral-dark: #6a6a6a;
+@neutral-darker: #4a4a4a;
+@neutral-disabled: @neutral;
+@neutral-disabled-dark: #bbbbbb;
+
+/* BLUES (B1 - B4) - from lightest to darkest */
+@primary-pale: #e1e7ed; // Added in case we still need this shade
+@primary-lightest: #cff4fe;
+@primary-lighter: #89e3f9;
+@primary-light: #3ebede;
+@primary: #1a8099;
+@primary-dark: #0e5061; // primary-dark and primary-darker the same color due to change in primary color
+@primary-darker: #0e5061; // Kept for backward compatibility
+@primary-spin-1: spin(@primary-light, 10); // Switched to primary-light as the base for backward compatibility
+@primary-spin-2: spin(@primary-light, 20);
+@primary-spin-3: spin(@primary-light, 30);
+@primary-spin-4: spin(@primary-light, 40);
+
+/* GREENS (G1 - G4) - from lightest to darkest */
+@accent-1-lightest: #dae7dd;
+@accent-1-light: #8cf88c;
+@accent-1: #51dc51;
+@accent-1-dark: #1a871a;
+@accent-1-darker: #105710;
+@accent-1-spin-1: spin(@accent-1, 10);
+@accent-1-spin-2: spin(@accent-1, 20);
+@accent-1-spin-3: spin(@accent-1, 30);
+@accent-1-spin-4: spin(@accent-1, 40);
+
+/* ORANGES (O1 - O4) - from lightest to darkest */
+@accent-2-light: #fcac6b;
+@accent-2: #f47b19;
+@accent-2-dark: #d14019;
+@accent-2-darker: #872a10;
+@accent-2-spin-1: spin(@accent-2, 10);
+@accent-2-spin-2: spin(@accent-2, 20);
+@accent-2-spin-3: spin(@accent-2, 30);
+@accent-2-spin-4: spin(@accent-2, 40);
+
+/* MAGENTAS (M1 - M4) - from lightest to darkest */
+@accent-3-light: #fd6fa5;
+@accent-3: #e70a5b;
+@accent-3-dark: #a40541;
+@accent-3-darker: #70032d;
+@accent-3-spin-1: spin(@accent-3, 10);
+@accent-3-spin-2: spin(@accent-3, 20);
+@accent-3-spin-3: spin(@accent-3, 30);
+@accent-3-spin-4: spin(@accent-3, 40);
+
+/* PURPLES (P1 - P4) - from lightest to darkest */
+@accent-4-light: #e477ff;
+@accent-4: #cc00ff;
+@accent-4-dark: #8100a1;
+@accent-4-darker: #530067;
+@accent-4-spin-1: spin(@accent-4, 10);
+@accent-4-spin-2: spin(@accent-4, 20);
+@accent-4-spin-3: spin(@accent-4, 30);
+@accent-4-spin-4: spin(@accent-4, 40);
+
+/* YELLOWS (Y1 - Y3) - from lightest to darkest */
+@accent-5-lightest: #f3ede0;
+@accent-5: #f9f08f;
+@accent-5-dark: #ffb400;
+@accent-5-darker: #756328;
+@accent-5-darkest: #756328; /* Deprecated - use @accent-5-darker instead to match other colors */
+
+/* REDS - (R1 - R3) - from lightest to darkest */
+@accent-6-lightest: #f1e1e7; /* Deprecated - use @accent-6-lighter instead to match other colors */
+@accent-6-lighter: #f1e1e7;
+@accent-6-light: #f2b7b7;
+@accent-6: #d40f0f;
+@accent-6-dark: #940a0a;
+
+@accent-6-spin-1: spin(@accent-6, 10);
+@accent-6-spin-2: spin(@accent-6, 20);
+@accent-6-spin-3: spin(@accent-6, 30);
+
+/* AQUAS (A1 - A4) - from lightest to darkest */
+@accent-7-light: #7fe9ce;
+@accent-7: #2adbad;
+@accent-7-dark: #1a8569;
+@accent-7-darker: #105542;
+@accent-7-spin-1: spin(@accent-7, 10);
+@accent-7-spin-2: spin(@accent-7, 20);
+@accent-7-spin-3: spin(@accent-7, 30);
+@accent-7-spin-4: spin(@accent-7, 40);
+
+@content-bg-color: #f5f5f5;
+
+// Links
+@link-color: #086274;
+@link-hover-color: rgba(8, 98, 116, .7);
+@link-active-color: #086274;
+
+// Nav - #2c4b60
+@left-nav-color : darken(@primary, 35%);
+
+// Status Type Colors
+@color-status-success: @accent-1-dark;
+@color-status-warning: @accent-2;
+@color-status-error: @accent-6;
+@color-status-info: @accent-5;
+
+// Shadow color
+@shadow-color: @neutral;
+
+// tile background color
+@tile-bgcolor: #f2f2f2;
+@tile-bgcolor-hover: #f4f4f4;
+
+// Table row colors
+@table-row-bg-color: @neutral-lighter;
+@table-row-header-bg-color: darken(@table-row-bg-color, 4%);
+@table-row-alt-bg-color: @content-bg-color;
+@table-row-alt-header-bg-color: darken(@table-row-alt-bg-color, 4%);
+
+// Twitter Logo color
+@twitter-logo-color: #55acee;
+
+// Bootstrap color added to remove dependency
+@input-border-focus: #66afe9;
