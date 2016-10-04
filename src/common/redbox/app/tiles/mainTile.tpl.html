@@ -1,4 +1,7 @@
-<div>{{tile.desc}}</div>
+<div>Population: {{tile.state.population | number: 0}}</div>
+<div>Size (sq. miles): {{tile.state.squareMiles | number: 0}}</div>
+<div>Capital: {{tile.state.capital}}</div>
+<div>Largest City: {{tile.state.mostPopulousCity}}</div>
 <div class="btn-container">
-    <a ui-sref="{{tile.link}}" adp-button="primary">{{tile.linkText}}</a>
+    <a href ng-click="selectState(tile)" adp-button="secondary">edit</a>
 </div>

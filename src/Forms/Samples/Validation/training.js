@@ -75,14 +75,6 @@ function HomeController() {
     }];
 }
 
-/*
-angular.module('redbox.ext.shared.services')
-    .config(DecoratedUserIdentityService);
-
-angular.module('redbox.ext.shared.services')
-    .config(DecoratedSessionService);
-*/
-
 angular.module('training.main', [
     'ngSanitize',
     //'ngMessages',
@@ -108,17 +100,21 @@ angular.module('training.main', [
     //'ui.grid',
     //'ui.grid.infiniteScroll',
     //'benefits.redbox.core',
-    'ngMockE2E'
 ])
     .controller('HomeController', HomeController)
     .controller('FormController', FormController)
     .controller('AccordionController', AccordionController)
     .config(Routes)
     .config(['$locationProvider', function($locationProvider) {
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
     }])
-    .run(function($httpBackend) {
-        $httpBackend.whenGET(/.*/).passThrough();
-        $httpBackend.whenPOST(/.*/).passThrough();
-        $httpBackend.whenPUT(/.*/).passThrough();
+    .run(function($window, $httpBackend) {
+        $window.onbeforeunload = function() {
+            debugger;
+        };
+        //$httpBackend.whenPOST(/.*/).passThrough();
+        //$httpBackend.whenPUT(/.*/).passThrough();
     });

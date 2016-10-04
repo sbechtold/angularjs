@@ -5,6 +5,7 @@ angular.module("statesApp.controllers", ["statesApp.services"])
        };
    }])
    .controller("ListController", ["$scope" , "stateService", function($scope, stateService) {
+       $scope.tiles = [];
        $scope.states = stateService.all();
        $scope.states.$promise.catch(function (params) {
           console.error("An error occurred querying server"); 
