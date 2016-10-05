@@ -1,15 +1,25 @@
-<div class="container-fluid">
-    
-    {{r}}
-    <div class="row">
-        <div class="col-md-4">
-            <h2>List of States</h2>
-        </div>
-        <div class="col-md-6">
-            <input type="button" class="btn btn-primary pull-right" ng-click="go('/details/')" value="Create New" /> 
-        </div>
+<!-- Navigation -->
+<div class="top-nav">
+    <div class="row no-margin">
+        <!-- Side Menu Toggle -->
+        <a id="side-toggle" class="visible-sm-block visible-xs-block" data-ng-click="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <span class="header-text-style">List of States</span>
     </div>
-    <div class="row">
-        <div class="col-md-2" ng-repeat="state in states | orderBy:'name'"><a href ng-click="selectState(state)">{{state.name}}</a></div>
+</div>
+<!-- Page Container-->
+<div class="page-content container-fluid">
+    <div class="content">
+        <div class="container-fluid" ui-view autoscroll="false">
+            {{r}}
+            <div adp-dashboard>
+                <div class="isotope-three-column-width"></div>
+                <div class="isotope-three-column-gutter"></div>
+                <adp-tile data-ng-repeat="state in states | orderBy: 'name'" title="{{state.name}}" id="{{state._id}}" show="true" order="{{state.name}}" url="pages/stateTile.tpl.html"></adp-tile>
+                <!--<div class="col-md-2" ng-repeat="state in states | orderBy:'name'"><a href ng-click="selectState(state)">{{state.name}}</a></div>-->
+                <adp-tile title="New State" show="true" data-order="zzz" url="pages/addNewTile.tpl.html"></adp-tile>
+            </div>
+        </div>
     </div>
 </div>

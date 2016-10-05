@@ -1,0 +1,7 @@
+<div>Population: {{state.population | number: 0}}</div>
+<div>Size (sq. miles): {{state.squareMiles | number: 0}}</div>
+<div>Capital: {{state.capital}}</div>
+<div>Largest City: {{state.mostPopulousCity}}</div>
+<div class="btn-container">
+    <a href ng-click="selectState(state)" adp-button="secondary">edit</a>
+</div>

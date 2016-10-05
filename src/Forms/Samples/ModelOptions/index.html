@@ -1,17 +1,63 @@
 <!DOCTYPE html>
-    <html ng-app="statesApp">
-     <head>
-        <title>States App</title>
-        <link href="/common/css/bootstrap/bootstrap.css" type="text/css" rel="stylesheet"/>
-    </head>
-    <body ng-controller="AppController" ng-view>
-         
-        <script src="/common/js/angular/angular.js"></script>
-        <script src="/common/js/angular-route/angular-route.js"></script>
-        <script src="/common/js/angular-resource/angular-resource.js"></script>
-        <script src="js/controllers.js"></script>
-        <script src="js/factories.js"></script>
-        <script src="js/services.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+<html ng-app="statesApp">
+<head>
+    <title>States App</title>
+    <!-- Redbox Specific CSS -->
+    <script src="/common/redbox/vendor/js/less.min.js"></script>
+    <link href="/common/redbox/vendor/css/vendor.min.css" rel="stylesheet" type="text/css">
+    <link href="/common/redbox/redbox/css/redbox.min.css" rel="stylesheet" type="text/css">
+    <link href="/common/redbox/vendor/css/brandable.less" rel="stylesheet/less" type="text/less">
+    <link href="/common/redbox/training.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="stage show">
+    <div>
+        <div class="cover animate">
+            <div class="company-logo"></div>
+            <div data-ng-if="!appCtrl.inOnboarding()" class="icon adp-fa-icon-adp-logo powered-by-adp-logo" onclick="window.open('http://www.adp.com')" title="Powered By ADP"></div>
+        </div>
+        <div class="top-header-ribbon visible-xs visible-sm visible-md"></div>
+        <div class="overlay"></div>
+        <div class="slidein-boundary"></div>
+
+        <div id="framework-container" class="container framework-container animate">
+            <!-- Sidebar -->
+            <div class="page-sidebar nav vertical animate">
+                <!-- Menu -->
+                <ul class="menu">
+                    <li></li>
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-home fa-3x"></i>
+                            <span class="txt">Home</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Page Container -->
+            <div class="page-container animate" ng-controller="AppController" ng-view>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/common/redbox/vendor/js/vendor.min.js"></script>
+<script src="/common/redbox/vendor/js/angular-mocks.js"></script>
+<script src="/common/redbox/redbox/js/adp-components.min.js"></script>
+<script src="/common/redbox/redbox/js/templates.app.min.js"></script>
+<script src="/common/redbox/redbox/js/redbox.min.js"></script>
+
+<script src="/common/js/angular-route/angular-route.js"></script>
+<script src="/common/js/angular-resource/angular-resource.js"></script>
+
+<script src="/common/helpers/directives/angularJsClass.directives.js"></script>
+
+<script src="js/controllers.js"></script>
+<script src="js/factories.js"></script>
+<script src="js/services.js"></script>
+<script src="js/app.js"></script>
+</body>
 </html>
