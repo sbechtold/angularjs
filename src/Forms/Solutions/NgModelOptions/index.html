@@ -13,18 +13,12 @@
 
 <div class="stage show">
     <div>
-        <div class="cover animate">
-            <div class="company-logo"></div>
-            <div data-ng-if="!appCtrl.inOnboarding()" class="icon adp-fa-icon-adp-logo powered-by-adp-logo" onclick="window.open('http://www.adp.com')" title="Powered By ADP"></div>
-        </div>
         <div class="top-header-ribbon visible-xs visible-sm visible-md"></div>
         <div class="overlay"></div>
         <div class="slidein-boundary"></div>
 
         <div id="framework-container" class="container framework-container animate">
-            <!-- Sidebar -->
             <div class="page-sidebar nav vertical animate">
-                <!-- Menu -->
                 <ul class="menu">
                     <li></li>
                     <li>
@@ -36,10 +30,7 @@
                 </ul>
             </div>
 
-            <!-- Page Container -->
-            <div class="page-container animate" ng-controller="AppController" ng-view>
-
-            </div>
+            <div class="page-container animate" ng-controller="AppController" ng-view></div>
         </div>
     </div>
 </div>
