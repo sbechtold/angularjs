@@ -90,9 +90,9 @@
                     Does Not Observe DST
                 </label>
                 </div>
-                <button type="submit" class="btn btn-primary pull-right" ng-submit ng-click="save()" ng-disabled="EditStates.$submitted && EditStates.$invalid">Submit</button>
-                <button type="submit" class="btn btn-danger" ng-click="delete()" ng-disabled="!isUpdating">Delete</button>
-                <button class="btn btn-default" ng-click="go('/')">Cancel</button>
+                <button type="submit" adp-button="primary" class="pull-right" ng-submit ng-click="save()" ng-disabled="EditStates.$submitted && EditStates.$invalid">Submit</button>
+                <button type="button" adp-button="link" ng-click="delete()" ng-disabled="!isUpdating">Delete</button>
+                <button type="button" adp-button="secondary" ng-click="go('/')">Cancel</button>
             </form>
         </div>
     </div>
