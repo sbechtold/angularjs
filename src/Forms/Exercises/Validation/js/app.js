@@ -26,17 +26,17 @@ angular.module("productApp", [
     //"ui.grid.infiniteScroll",
     //"benefits.redbox.core",
 ])
-    .config(["$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
-        $routeProvider
-            .when("/", {
-                templateUrl : "pages/list.html",
-                controller: "ListController"
-            })
-            .when("/details/:id?", {
-                templateUrl : "pages/detail.html",
-                controller: "DetailController"
-            })
-            .otherwise({
-                redirectTo: "/"
-            });
-    }]);
+.config(["$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
+    $routeProvider
+        .when("/", {
+            templateUrl : "pages/list.html",
+            controller: "ListController"
+        })
+        .when("/details/:id?", {
+            templateUrl : "pages/detail.html",
+            controller: "DetailController"
+        })
+        .otherwise({
+            redirectTo: "/"
+        });
+}]);
