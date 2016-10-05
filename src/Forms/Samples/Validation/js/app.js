@@ -2,32 +2,12 @@ angular.module("statesApp", [
     "ngRoute",
     "statesApp.controllers",
     "angularJsClass.directives",
-    'ngSanitize',
-    //'ngMessages',
-    'ngResource',
-    'ui.router',
-    'ui.bootstrap',
-    'redbox.shared.utils',
-    'redbox.framework.directives',
-    //'redbox.framework.configuration',
-    'redbox.shared.services',
-    'adp.ng.language',
-    'adp.ng.ui.modal',
-    'adp.ng.meta',
-    'redbox.framework',
-    'redbox.framework.footer',
-    'redbox.framework.components',
-    'redbox.framework.meta',
-    'redbox.branding',
-    //'redbox.framework.templates',
-    //'redbox.framework.ext.templates',
-    'redbox.legal',
-    'redbox.shell',
-    //'ui.grid',
-    //'ui.grid.infiniteScroll',
-    //'benefits.redbox.core',
+    "ui.router",
+    "redbox.framework.meta",
+    "redbox.branding",
+    "redbox.shell"
 ])
-    .config(["$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
+    .config(["$routeProvider", "$locationProvider", function($routeProvider) {
         $routeProvider
             .when("/", {
                 templateUrl : "pages/list.html",
