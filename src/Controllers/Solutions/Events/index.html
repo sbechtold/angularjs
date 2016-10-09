@@ -3,7 +3,7 @@
      <head>
         <title>Teams</title>
     </head>
-    <body ng-controller="ListController">
+    <body ng-controller="ListController as ListCtrl">
         <h1>My Teams</h1>
         <table>
             <thead>
@@ -18,14 +18,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="team in teams">
-                    <td><input type="button" value="X" ng-click="removeTeam(team)" />
+                <tr ng-repeat="team in ListCtrl.teams">
+                    <td><input type="button" value="X" ng-click="ListCtrl.removeTeam(team)" />
                     <td>{{team.Name}}</td>
                     <td>{{team.League}}</td>
                     <td>{{team.Division}}</td>
                     <td>{{team.Wins}}</td>
                     <td>{{team.Loses}}</td>
-                    <td>{{(team.Wins / (team.Wins + team.Loses)) * 1000}}</td>
+                    <td>{{(team.Wins / (team.Wins + team.Loses)) * 100}}</td>
                 </tr>
             </tbody>
             <!--
@@ -36,12 +36,12 @@
                 -->
             <tfoot>
                 <tr>
-                    <td><input type="button" value="+" ng-click="addTeam()" />
-                    <td><input type="text" ng-model="newTeam.Name" /></td>
-                    <td><input type="text" ng-model="newTeam.League" /></td>
-                    <td><input type="text" ng-model="newTeam.Division" /></td>
-                    <td><input type="text" ng-model="newTeam.Wins" /></td>
-                    <td><input type="text" ng-model="newTeam.Loses" /></td>
+                    <td><input type="button" value="+" ng-click="ListCtrl.addTeam()" />
+                    <td><input type="text" ng-model="ListCtrl.newTeam.Name" /></td>
+                    <td><input type="text" ng-model="ListCtrl.newTeam.League" /></td>
+                    <td><input type="text" ng-model="ListCtrl.newTeam.Division" /></td>
+                    <td><input type="text" ng-model="ListCtrl.newTeam.Wins" /></td>
+                    <td><input type="text" ng-model="ListCtrl.newTeam.Loses" /></td>
                 </tr>
             </tfoot>
         </table>
@@ -50,7 +50,7 @@
             Add a button to restore all teams that should only be visible if
             there are teams that need restored
             -->
-        <input type="button" value="Restore Deleted Teams" ng-if="deleted.length > 0" ng-click="restoreAll()" />
+        <input type="button" value="Restore Deleted Teams" ng-if="ListCtrl.deleted.length > 0" ng-click="ListCtrl.restoreAll()" />
 
         <script src="/common/js/angular/angular.js"></script>
         <script src="controllers.js"></script>

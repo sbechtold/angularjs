@@ -3,10 +3,10 @@
      <head>
         <title>Repeater</title>
     </head>
-    <body ng-controller="MainController">
+    <body ng-controller="MainController as MainCtrl">
         <h1>Repeaters</h1>
         <ul>
-            <li ng-repeat="one in numbers">{{one}}</li>
+            <li ng-repeat="one in MainCtrl.numbers">{{one}}</li>
         </ul>
         <script src="/common/js/angular/angular.js"></script>
         <script src="controllers.js"></script>

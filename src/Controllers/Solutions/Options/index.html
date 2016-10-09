@@ -3,7 +3,7 @@
      <head>
         <title>Repeater</title>
     </head>
-    <body ng-controller="ListController">
+    <body ng-controller="ListController as ListCtrl">
         <h1>View Teams</h1>        
         
         <h2>Select a team</h2>
@@ -11,7 +11,7 @@
             Implement a select box that has the list of teams and a default (or empty) option 
             When selected it should populate the UL below
         -->
-        <select name="team" ng-model="team" ng-options="team.Name for team in teams track by team.Id">
+        <select name="team" ng-model="team" ng-options="team.Name for team in ListCtrl.teams track by team.Id">
             <option value="">[Please Choose]</option>
         </select>
         

@@ -19,6 +19,7 @@ var data = [
 
 
 var app = angular.module("myTeamApp", []);
-app.controller("ListController", ["$scope", function ($scope) {
-    $scope.teams = data;
+app.controller("ListController", [function () {
+    var vm = this;
+    vm.teams = data;
 }])

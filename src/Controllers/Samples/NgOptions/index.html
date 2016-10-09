@@ -3,11 +3,11 @@
      <head>
         <title>Options</title>
     </head>
-    <body ng-controller="MainController">
+    <body ng-controller="MainController as MainCtrl">
         <h1>Options with Objects</h1>
 
         <h2>Select from People</h2>
-        <select name="person" ng-model="person" ng-options="one.Name for one in people track by one.Id">
+        <select name="person" ng-model="person" ng-options="one.Name for one in MainCtrl.people track by one.Id">
             <option value="">[Please Choose]</option>
         </select>
 

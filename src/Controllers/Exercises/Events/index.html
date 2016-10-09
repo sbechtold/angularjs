@@ -3,7 +3,7 @@
      <head>
         <title>Teams</title>
     </head>
-    <body ng-controller="ListController">
+    <body ng-controller="ListController as listCtrl">
         <h1>My Teams</h1>
         <table>
             <thead>
@@ -18,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="team in teams">
+                <tr ng-repeat="team in listCtrl.teams">
                     <td><input type="button" value="X" ng-click="removeTeam(team)" />
                     <td>{{team.Name}}</td>
                     <td>{{team.League}}</td>

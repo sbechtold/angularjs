@@ -3,7 +3,7 @@
      <head>
         <title>Repeater</title>
     </head>
-    <body ng-controller="MainController">
+    <body ng-controller="MainController as MainCtrl">
         <h1>Repeaters with Objects</h1>
 
         <table>
@@ -15,7 +15,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="one in people">
+                <tr ng-repeat="one in MainCtrl.people">
                     <td>{{one.Name}}</td>
                     <td>{{one.Age}}</td>
                     <td>{{one.Gender}}</td>

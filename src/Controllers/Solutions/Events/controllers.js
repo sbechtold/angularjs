@@ -20,37 +20,38 @@ var data = [
    ];
 
 var app = angular.module("myTeamApp", []);
-app.controller("ListController", ["$scope", "$log", function ($scope, $log) {
-    $scope.teams = data;
-    $scope.deleted = [];
-    $scope.newTeam = {};
+app.controller("ListController", ["$log", function ($log) {
+    var vm = this;
+    vm.teams = data;
+    vm.deleted = [];
+    vm.newTeam = {};
 
-    $scope.teamSequenceId = $scope.teams.length;
+    vm.teamSequenceId = vm.teams.length;
 
-    $scope.addTeam = function () {
-        $scope.teamSequenceId++;
-        $scope.newTeam.Id = $scope.teamSequenceId;
-        $scope.teams.push($scope.newTeam);
-        $log.info("Team with ID:" + $scope.teamSequenceId + " Has been added");
+    vm.addTeam = function () {
+        vm.teamSequenceId++;
+        vm.newTeam.Id = vm.teamSequenceId;
+        vm.teams.push(vm.newTeam);
+        $log.info("Team with ID:" + vm.teamSequenceId + " Has been added");
 
-        $scope.newTeam = {};
+        vm.newTeam = {};
     };
 
-    $scope.removeTeam = function (team) {
-        var location = $scope.teams.indexOf(team);
+    vm.removeTeam = function (team) {
+        var location = vm.teams.indexOf(team);
         if (location > -1) {
-            $scope.deleted.push($scope.teams[location]);
-            $scope.teams.splice(location, 1);
+            vm.deleted.push(vm.teams[location]);
+            vm.teams.splice(location, 1);
         }
     };
 
-    $scope.restoreAll = function () {
+    vm.restoreAll = function () {
         // Angular uses a lite version of underscore. Works as a foreach statement
         // you give it an array and an interator receiver which does work
         // for each record within the array.
-        $scope.deleted.forEach(function (one) {
-           $scope.teams.push(one);
+        vm.deleted.forEach(function (one) {
+            vm.teams.push(one);
         });
-        $scope.deleted = [];
+        vm.deleted = [];
     };
-}])
+}]);

@@ -3,7 +3,7 @@ Using the data below
 
 Create a module named myTeamApp
 
-Create a controller named ListController
+Create a controller (using the "Controller As" syntax) named ListController
 
 Add the data array to a variable in scope so that is accessible to the view
 */
