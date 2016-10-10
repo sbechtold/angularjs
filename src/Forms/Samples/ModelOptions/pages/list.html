@@ -11,7 +11,7 @@
             <div adp-dashboard>
                 <div class="isotope-three-column-width"></div>
                 <div class="isotope-three-column-gutter"></div>
-                <adp-tile data-ng-repeat="state in states | orderBy: 'name'" title="{{state.name}}" id="{{state._id}}" show="true" order="{{state.name}}" url="pages/stateTile.tpl.html"></adp-tile>
+                <adp-tile data-ng-repeat="state in ListCtrl.states | orderBy: 'name'" title="{{state.name}}" id="{{state._id}}" show="true" order="{{state.name}}" url="pages/stateTile.tpl.html"></adp-tile>
                 <adp-tile title="New State" show="true" data-order="zzz" url="pages/addNewTile.tpl.html"></adp-tile>
             </div>
         </div>

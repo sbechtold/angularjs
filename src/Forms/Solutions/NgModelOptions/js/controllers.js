@@ -12,12 +12,13 @@ angular.module("productApp.controllers", ["productApp.services"])
        };
    }])
    .controller("ListController", ["$scope" , "productService", function($scope, productService) {
-       $scope.products = productService.all();
-       $scope.products.$promise.catch(function (params) {
+       var vm = this;
+       vm.products = productService.all();
+       vm.products.$promise.catch(function (params) {
           console.error("An error occurred querying server");
        });
 
-       $scope.selectProduct = function (product) {
+       vm.selectProduct = function (product) {
            $scope.go("/details/" + product.productID);
        };
    }])

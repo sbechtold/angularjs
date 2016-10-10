@@ -5,12 +5,13 @@ angular.module("statesApp.controllers", ["statesApp.services"])
        };
    }])
    .controller("ListController", ["$scope" , "stateService", function($scope, stateService) {
-       $scope.states = stateService.all();
-       $scope.states.$promise.catch(function (params) {
+       var vm = this;
+       vm.states = stateService.all();
+       vm.states.$promise.catch(function (params) {
           console.error("An error occurred querying server");
        });
 
-       $scope.selectState = function (state) {
+       vm.selectState = function (state) {
            $scope.go("/details/" + state._id);
        };
    }])

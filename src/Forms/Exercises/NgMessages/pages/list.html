@@ -25,7 +25,7 @@
             <div adp-dashboard>
                 <div class="isotope-three-column-width"></div>
                 <div class="isotope-three-column-gutter"></div>
-                <adp-tile data-ng-repeat="product in products | filter:filter | orderBy: 'productName' track by product._id" title="{{product.productName}}" id="{{product._id}}" show="true" order="product.productName" url="pages/productTile.tpl.html"></adp-tile>
+                <adp-tile data-ng-repeat="product in ListCtrl.products | filter:filter | orderBy: 'productName' track by product._id" title="{{product.productName}}" id="{{product._id}}" show="true" order="product.productName" url="pages/productTile.tpl.html"></adp-tile>
             </div>
         </div>
     </div>

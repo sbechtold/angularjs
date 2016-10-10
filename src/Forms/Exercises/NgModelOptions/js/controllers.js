@@ -12,22 +12,22 @@ angular.module("productApp.controllers", ["productApp.services"])
        };
    }])
    .controller("ListController", ["$scope" , "productService", function($scope, productService) {
-       $scope.products = productService.all();
-       $scope.products.$promise.catch(function (params) {
+       var vm = this;
+       vm.products = productService.all();
+       vm.products.$promise.catch(function (params) {
           console.error("An error occurred querying server"); 
        });
        
-       $scope.selectProduct = function (product) {
+       vm.selectProduct = function (product) {
            $scope.go("/details/" + product.productID);
        };
    }])
    .controller("DetailController", ["$scope" , "$routeParams", "productService", function($scope, $routeParams, productService) {
-       
        $scope.isUpdating = false;
        if ($routeParams.id) {
-            $scope.product = productService.getById($routeParams.id);
-            $scope.product.$promise.then(function (res) {
-                $scope.isUpdating = true;
+           $scope.product = productService.getById($routeParams.id);
+           $scope.product.$promise.then(function (res) {
+               $scope.isUpdating = true;
             }).catch(function (params) {
                 console.error("An error occurred fetching product"); 
             });
@@ -35,7 +35,7 @@ angular.module("productApp.controllers", ["productApp.services"])
        else {
            $scope.product = productService.build();
        }
-       
+
        $scope.delete = function () {
            productService.delete($scope.product).then(function (res) {
                $scope.go("/");
@@ -43,9 +43,9 @@ angular.module("productApp.controllers", ["productApp.services"])
                 console.error("An error occurred deleting a product"); 
             });
        };
-      
+
        $scope.save = function () {
-           $scope.product = productService.save($scope.product);
+           $scope.product = productService.save($scopeproduct);
            $scope.product.$promise.then(function (result) {
                 $scope.go("/");
             }).catch(function (params) {

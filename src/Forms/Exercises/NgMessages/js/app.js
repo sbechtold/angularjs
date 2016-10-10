@@ -11,11 +11,13 @@ angular.module("productApp", [
     $routeProvider
         .when("/", {
             templateUrl : "pages/list.html",
-            controller: "ListController"
+            controller: "ListController",
+            controllerAs: "ListCtrl"
         })
         .when("/details/:id?", {
             templateUrl : "pages/detail.html",
-            controller: "DetailController"
+            controller: "DetailController",
+            controllerAs: "DetailCtrl"
         })
         .otherwise({
             redirectTo: '/'
