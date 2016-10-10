@@ -4,11 +4,11 @@
         <title>Require Directives</title>
         <link href="/common/css/bootstrap/bootstrap.css" type="text/css" rel="stylesheet"/>
     </head>
-    <body ng-controller="HomeController">
+    <body ng-controller="HomeController as HomeCtrl">
         <h1>Directives</h1>
 
         <container>
-            <pane header="person.Name" ng-repeat="person in people">
+            <pane header="person.Name" ng-repeat="person in HomeCtrl.people">
                 <ul>
                     <li><b>Name:</b> {{person.Name}}</li>
                     <li><b>Age:</b> {{person.Age}}</li>
@@ -17,7 +17,7 @@
             </pane>
         </container>
         
-        <pane header="person.Name" ng-repeat="person in people">
+        <pane header="person.Name" ng-repeat="person in HomeCtrl.people">
                 <ul>
                     <li><b>Name:</b> {{person.Name}}</li>
                     <li><b>Age:</b> {{person.Age}}</li>

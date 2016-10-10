@@ -1,5 +1,5 @@
 angular.module("myApp", ["myApp.directives"])
-    .controller("HomeController", function ($scope) {
-        
+    .controller("HomeController", function () {
+        var vm = this;
         
     });

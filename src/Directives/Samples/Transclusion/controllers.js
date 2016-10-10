@@ -1,6 +1,7 @@
 angular.module("myApp", ["myApp.directives"])
-    .controller("HomeController", function ($scope) {
-        $scope.people = [
+    .controller("HomeController", function () {
+        var vm = this;
+        vm.people = [
             { "Name":"Bob", "Age":23, "Gender":"Male", "Id":1 },
             { "Name":"Chuck", "Age":31, "Gender":"Male", "Id":2 },
             { "Name":"John", "Age":25, "Gender":"Male", "Id":3 },

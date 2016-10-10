@@ -10,6 +10,6 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2" ng-repeat="state in states | orderBy:'name'"><a href ng-click="selectState(state)">{{state.name}}</a></div>
+        <div class="col-md-2" ng-repeat="state in ListCtrl.states | orderBy:'name'"><a href ng-click="ListCtrl.selectState(state)">{{state.name}}</a></div>
     </div>
 </div>

@@ -5,43 +5,45 @@ angular.module("statesApp.controllers", ["statesApp.services"])
        };
    }])
    .controller("ListController", ["$scope" , "stateService", function($scope, stateService) {
-       $scope.states = stateService.all();
-       $scope.states.$promise.catch(function (params) {
+       var vm = this;
+       vm.states = stateService.all();
+       vm.states.$promise.catch(function (params) {
           console.error("An error occurred querying server"); 
        });
        
-       $scope.selectState = function (state) {
+       vm.selectState = function (state) {
            $scope.go("/details/" + state._id);
        };
    }])
    .controller("DetailController", ["$scope" , "$routeParams", "stateService", function($scope, $routeParams, stateService) {
-       $scope.isUpdating = false;
+       var vm = this;
+       vm.isUpdating = false;
        if ($routeParams.id) {
-            $scope.state = stateService.getById($routeParams.id);
-            $scope.state.$promise.then(function(res) {
-                if (res) $scope.isUpdating = true;
+            vm.state = stateService.getById($routeParams.id);
+            vm.state.$promise.then(function(res) {
+                if (res) vm.isUpdating = true;
             }).catch(function (params) {
                 console.error("An error occurred fetching state"); 
             });
        }
        else {
-           $scope.state = stateService.build();
+           vm.state = stateService.build();
        }
        
-       $scope.save = function () {
-           if ($scope.EditStates.$invalid)
+       vm.save = function () {
+           if (vm.EditStates.$invalid)
                 return;
-           $scope.state._id = $scope.state.abbreviation;
-           $scope.state = stateService.save($scope.state);
-           $scope.state.$promise.then(function (result) {
+           vm.state._id = vm.state.abbreviation;
+           vm.state = stateService.save(vm.state);
+           vm.state.$promise.then(function (result) {
                 $scope.go("/");
                 }).catch(function (params) {
                     console.error("An error occurred deleting a state"); 
                 });
        };
       
-       $scope.delete = function () {
-           stateService.delete($scope.state).then(function (res) {
+       vm.delete = function () {
+           stateService.delete(vm.state).then(function (res) {
                $scope.go("/");
            }).catch(function (params) {
                 console.error("An error occurred deleting a state"); 

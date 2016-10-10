@@ -3,9 +3,9 @@
      <head>
         <title>Simple Directives</title>
     </head>
-    <body ng-controller="HomeController">
+    <body ng-controller="HomeController as HomeCtrl">
         <h1>Directives</h1>
-        <input type="text" ng-model="message" />
+        <input type="text" ng-model="HomeCtrl.message" />
         <br /><br  />
 
         <h2>Dependent</h2>
@@ -15,8 +15,8 @@
         <h2>Isolate</h2>
         <evaluator expression="myExpr"
                    result="output"
-                   on-expression-change="updatedEvalution(myExpr)"
-                   on-result-change="valueDidChange(output)"
+                   on-expression-change="HomeCtrl.updatedEvalution(myExpr)"
+                   on-result-change="HomeCtrl.valueDidChange(output)"
                    title="Type to evaluate your Expression">
         </evaluator>
         <br />
