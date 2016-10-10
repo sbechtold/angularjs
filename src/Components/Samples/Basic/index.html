@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Basic Components</title>
+    <link href="/common/css/bootstrap/bootstrap.css" type="text/css" rel="stylesheet"/>
+</head>
+<body ng-controller="HomeController as HomeCtrl">
+<h1>Components</h1>
+
+<team-component team="team" ng-repeat="team in HomeCtrl.teams"></team-component>
+
+<script src="/common/js/jquery/jquery.js"></script>
+<script src="/common/js/angular/angular.js"></script>
+<script src="components/components.js"></script>
+<script src="controllers.js"></script>
+</body>
+</html>
