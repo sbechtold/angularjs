@@ -3,7 +3,7 @@
      <head>
         <title>Event Handlers</title>
     </head>
-    <body ng-controller="ListController">
+    <body ng-controller="ListController as ListCtrl">
         <h1>Event Handlers</h1>
 
         <table>
@@ -19,8 +19,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="team in teams">
-                    <td><input type="button" value="X" ng-click="removeTeam(team)" />
+                <tr ng-repeat="team in ListCtrl.teams">
+                    <td><input type="button" value="X" ng-click="ListCtrl.removeTeam(team)" />
                     <td>{{team.Name}}</td>
                     <td>{{team.League}}</td>
                     <td>{{team.Division}}</td>
@@ -31,12 +31,12 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td><input type="button" value="+" ng-click="addTeam()" />
-                    <td><input type="text" ng-model="newTeam.Name" /></td>
-                    <td><input type="text" ng-model="newTeam.League" /></td>
-                    <td><input type="text" ng-model="newTeam.Division" /></td>
-                    <td><input type="number" ng-model="newTeam.Wins" /></td>
-                    <td><input type="number" ng-model="newTeam.Loses" /></td>
+                    <td><input type="button" value="+" ng-click="ListCtrl.addTeam()" />
+                    <td><input type="text" ng-model="ListCtrl.newTeam.Name" /></td>
+                    <td><input type="text" ng-model="ListCtrl.newTeam.League" /></td>
+                    <td><input type="text" ng-model="ListCtrl.newTeam.Division" /></td>
+                    <td><input type="number" ng-model="ListCtrl.newTeam.Wins" /></td>
+                    <td><input type="number" ng-model="ListCtrl.newTeam.Loses" /></td>
                 </tr>
             </tfoot>
         </table>

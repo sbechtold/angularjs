@@ -21,6 +21,6 @@
         </div>
     </div>    
     <div class="row">
-        <div class="col-md-3" ng-repeat="product in products | filter:filter | orderBy:'productName'"><a href ng-click="selectProduct(product)">{{product.productName}}</a></div>
+        <div class="col-md-3" ng-repeat="product in ListCtrl.products | filter:filter | orderBy:'productName'"><a href ng-click="ListCtrl.selectProduct(product)">{{product.productName}}</a></div>
     </div>
 </div>

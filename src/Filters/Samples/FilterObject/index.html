@@ -3,7 +3,7 @@
      <head>
         <title>Filter App</title>
     </head>
-    <body ng-controller="MainController">
+    <body ng-controller="MainController as MainCtrl">
         <h1>Filter Controller</h1>
         <h2>Filter By:</h2>
         <ul>
@@ -27,7 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="one in people | filter:criteria">
+                <tr ng-repeat="one in MainCtrl.people | filter:criteria">
                     <td>{{one.Name}}</td>
                     <td>{{one.Age}}</td>
                     <td>{{one.Gender}}</td>

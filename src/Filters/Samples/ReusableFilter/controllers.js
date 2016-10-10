@@ -1,6 +1,7 @@
 angular.module("filterApp.controllers", ["filterApp.filters"])
-    .controller("MainController", ["$scope", function ($scope) {
-        $scope.people = [
+    .controller("MainController", [function () {
+        var vm = this;
+        vm.people = [
             { "Name":"Bob", "Age":23, "Gender":"Male", "Id":1 },
             { "Name":"Chuck", "Age":31, "Gender":"Male", "Id":2 },
             { "Name":"John", "Age":25, "Gender":"Male", "Id":3 },
@@ -12,9 +13,9 @@ angular.module("filterApp.controllers", ["filterApp.filters"])
 
         // Doesn't have to be done this way; however, it acknowledges the use
         // of a variable by this name
-        $scope.filter = {};
-        $scope.ageGreaterThan = function (person) {
-            var minimumAge = parseInt($scope.minAge);
+        vm.filter = {};
+        vm.ageGreaterThan = function (person) {
+            var minimumAge = parseInt(vm.minAge);
             if (!minimumAge) {
                 minimumAge = 0;
             }

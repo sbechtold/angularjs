@@ -3,14 +3,14 @@
      <head>
         <title>Filter App</title>
     </head>
-    <body ng-controller="MainController">
+    <body ng-controller="MainController as MainCtrl">
         <h1>Filter Controller with Sort</h1>
 
         <h2>Filter By:</h2>
         <ul>
-            <li>By Name: <input type="text" ng-model="filter.Name" /></li>
-            <li>By League: <input type="number" ng-model="filter.League" /></li>
-            <li>By Division: <input type="number" ng-model="filter.Division" /></li>
+            <li>By Name: <input type="text" ng-model="MainCtrl.filter.Name" /></li>
+            <li>By League: <input type="number" ng-model="MainCtrl.filter.League" /></li>
+            <li>By Division: <input type="number" ng-model="MainCtrl.filter.Division" /></li>
         </ul>
         
         <!-- 
@@ -20,16 +20,16 @@
         
         <h2>Win Range</h2>
         <ul>
-            <li>Max Wins: <input type="number" ng-model="winRange.Upper" /></li>
-            <li>Min Wins: <input type="number" ng-model="winRange.Lower" /></li>
+            <li>Max Wins: <input type="number" ng-model="MainCtrl.winRange.Upper" /></li>
+            <li>Min Wins: <input type="number" ng-model="MainCtrl.winRange.Lower" /></li>
         </ul>
         
         <h2>Order By:</h2>
          <ul>
-            <li>Sort On: <select name="order" ng-options="one for one in availableForSort track by one" ng-model="sortOn"></select></li>
-            <li>Direction:  <input type="radio" ng-model="sortDirection" name="asc" id="asc" ng-value="false" />
+            <li>Sort On: <select name="order" ng-options="one for one in MainCtrl.availableForSort track by one" ng-model="MainCtrl.sortOn"></select></li>
+            <li>Direction:  <input type="radio" ng-model="MainCtrl.sortDirection" name="asc" id="asc" ng-value="false" />
                             <label for="asc">Asc</label>
-                            <input type="radio" ng-model="sortDirection" name="desc" id="desc" ng-value="true" />
+                            <input type="radio" ng-model="MainCtrl.sortDirection" name="desc" id="desc" ng-value="true" />
                             <label for="desc">Desc</label></li>
         </ul>
         
@@ -49,7 +49,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="one in teams | filter:filter | filter:winsBetween | orderBy:sortOn:sortDirection">
+                <tr ng-repeat="one in MainCtrl.teams | filter:MainCtrl.filter | filter:MainCtrl.winsBetween | orderBy:MainCtrl.sortOn:MainCtrl.sortDirection">
                     <td>{{one.Name}}</td>
                     <td>{{one.League}}</td>
                     <td>{{one.Division}}</td>
