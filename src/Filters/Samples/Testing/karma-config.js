@@ -11,7 +11,8 @@ module.exports = function(config) {
         '../ReusableFilter/filters.js',
         '../FilterParameters/filters.js',
         
-        'tests.js'
+        'tests.js',
+        'tests-injector.js'
     ],
 
     exclude: [

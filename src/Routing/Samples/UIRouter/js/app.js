@@ -5,19 +5,20 @@ angular.module("myUIRouter", ["ui.router", "myUIRouter.controllers"])
                 templateUrl : 'pages/search.html'
             } )
             .state( 'search.list', {
-                url         : '/list',
+                url         : '^/list',
                 controller  : "ListController",
                 templateUrl : 'pages/list.html'
             } )
             .state( 'search.alt', {
-                url         : '/alt-list',
+                url         : '^/alt-list',
                 templateUrl : 'pages/alt-list.html'
             } )
             .state( 'search.list.detail', {
-                url         : '/details/:id',
+                url         : '^/list/details/:id',
                 templateUrl : 'pages/detail.html',
                 controller: 'DetailController'
             } );
 
             $urlRouterProvider.otherwise( '/' );
+            //$locationProvider.html5Mode(true);
     }]);

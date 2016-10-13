@@ -23,9 +23,8 @@ describe("Testing Filters", function () {
     describe("Test Local Filter", function () {
         beforeEach( function () {
             module( 'filterApp' );
-            inject( function ( $controller, $rootScope ) {
-                testScope = $rootScope.$new();
-                $controller( 'MainController', { $scope : testScope } );
+            inject( function ( $controller ) {
+                testScope = $controller( 'MainController');
             });
         });
 

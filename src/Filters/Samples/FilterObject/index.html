@@ -7,15 +7,15 @@
         <h1>Filter Controller</h1>
         <h2>Filter By:</h2>
         <ul>
-            <li>By Name: <input type="text" ng-model="criteria.Name" /></li>
-            <li>By Age: <input type="number" ng-model="criteria.Age" /></li>
-            <li>By Gender:  <input type="radio" ng-model="criteria.Gender" name="female" id="female" value="Female" />
+            <li>By Name: <input type="text" ng-model="MainCtrl.criteria.Name" /></li>
+            <li>By Age: <input type="number" ng-model="MainCtrl.criteria.Age" /></li>
+            <li>By Gender:  <input type="radio" ng-model="MainCtrl.criteria.Gender" name="female" id="female" value="Female" />
                             <label for="female">Female</label>
-                            <input type="radio" ng-model="criteria.Gender" name="male" id="male" value="Male" />
+                            <input type="radio" ng-model="MainCtrl.criteria.Gender" name="male" id="male" value="Male" />
                             <label for="male">Male</label></li>
         </ul>
 
-        <input type="button" ng-click="criteria = {}" value="Clear" />
+        <input type="button" ng-click="MainCtrl.criteria = {}" value="Clear" />
 
         <h2>Records</h2>
         <table>
@@ -27,7 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="one in MainCtrl.people | filter:criteria">
+                <tr ng-repeat="one in MainCtrl.people | filter:MainCtrl.criteria">
                     <td>{{one.Name}}</td>
                     <td>{{one.Age}}</td>
                     <td>{{one.Gender}}</td>

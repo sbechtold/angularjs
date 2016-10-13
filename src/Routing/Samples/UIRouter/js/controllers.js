@@ -16,9 +16,10 @@ angular.module("myUIRouter.controllers", ["myUIRouter.filters"])
    }])
    .controller("ListController", ["$scope", "$state", function($scope, $state) {
 
+       $scope.val = $state.current.name;
         $scope.isSelected = false;
         $scope.select = function(one) {
-          $state.go(".detail", {id:one});
+          $state.go("search.list.detail", {id:one});
           $scope.isSelected = true;
         };
    }])
