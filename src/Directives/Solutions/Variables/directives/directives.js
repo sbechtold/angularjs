@@ -20,8 +20,10 @@ angular.module("myApp.directives", [])
                 counter:"="
             },
             link: function (scope, element, attrs) {
-                var format = 'M/d/yy h:mm:ss a', interval;
+                var format = 'M/d/yy h:mm:ss a';
+                var interval;
                 scope.counter = 0;
+
 
                 element.find("button[name=start]").on("click", function () {
                     var el = $(this);

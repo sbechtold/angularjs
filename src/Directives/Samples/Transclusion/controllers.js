@@ -9,5 +9,7 @@ angular.module("myApp", ["myApp.directives"])
             { "Name":"Abigail", "Age":32, "Gender":"Female", "Id":5 },
             { "Name":"Doris", "Age":26, "Gender":"Female", "Id":6 },
             { "Name":"Jean", "Age":37, "Gender":"Male", "Id":7 }
-        ]; 
+        ];
+
+        vm.message = "This is the details of the person that we have selected";
     });

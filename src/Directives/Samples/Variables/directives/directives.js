@@ -4,13 +4,13 @@ angular.module("myApp.directives", [])
             templateUrl:"directives/partials/list-template.html",
             restrict:"E",
             link: function (scope, element, attrs) {
-                scope.$watch("message", function (newValue, oldValue) {
+                scope.$watch("HomeCtrl.message", function (newValue, oldValue) {
                     console.log("Message has changed to: " + newValue);
                     element.find("ul.log").append("<li>" + oldValue + "</li>");
                 });
 
                 element.find("button[name=addtime]").on("click", function (evt) {
-                    scope.message = scope.message + ":" + Date();
+                    scope.HomeCtrl.message = scope.HomeCtrl.message + ":" + Date();
                     scope.$apply();
                 });
 
@@ -25,8 +25,8 @@ angular.module("myApp.directives", [])
             templateUrl:"directives/partials/evaluator-template.html",
             restrict:"E",
             scope: {
-                expression:"=",
-                output:"=result",
+                expression:"=?",
+                output:"=?result",
                 expressionDidChange:"&onExpressionChange",
                 resultDidChange:"&onResultChange",
                 title:"@"
@@ -46,6 +46,44 @@ angular.module("myApp.directives", [])
 
                     if (typeof scope.resultDidChange == "function")
                         scope.resultDidChange();
+                });
+            }
+        };
+    }]).directive("someOther", [function () {
+        return {
+            template:"<input type='text' value={{value}} />",
+            restrict:"E",
+            scope: {
+                value:"=",
+            },
+            link: function (scope, element, attrs) {
+                element.find("input").on("keyup", function (evt) {
+                    scope.value = $(this).val();
+                    scope.$apply(); // Need to do this to persist changes
+                });
+
+                scope.$watch("value", function(n, o) {
+                    element.find("input").val(n);
+
+                });
+            }
+        };
+    }]).directive("someOtherOne", [function () {
+        return {
+            template:"<input type='text' value={{value}} />",
+            restrict:"E",
+            scope: {
+                value:"=",
+            },
+            link: function (scope, element, attrs) {
+                element.find("input").on("keyup", function (evt) {
+                    scope.value = $(this).val();
+                    scope.$apply(); // Need to do this to persist changes
+                });
+
+                scope.$watch("value", function(n, o) {
+                    element.find("input").val(n);
+
                 });
             }
         };

@@ -1,5 +1,5 @@
-<!--  
-    
+<!--
+
     Setup your page validation inline with the data model from the server:
     var fieldConfig = {
         "categoryID" : {type: Number, required: false},
@@ -13,7 +13,7 @@
         "unitsInStock" : Number,
         "unitsOnOrder" : Number
         };
-        
+
      You should make certain that the submit button is disabled until all of the fields are valid
 -->
 <div class="top-nav">
@@ -27,8 +27,8 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">  
-            <h2>Fill in the Form Below</h2>  
+        <div class="col-md-6 col-md-offset-3">
+            <h2>Fill in the Form Below</h2>
             <form name="EditProducts" novalidate>
                 <div class="form-group">
                     <label for="name">Product ID</label>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="btn-container">
                     <button type="button" class="btn btn-danger pull-right" ng-click="DetailCtrl.delete()" ng-disabled="!DetailCtrl.isUpdating">Delete</button>
-                    <button type="submit" adp-button="primary" ng-submit ng-disabled="EditProducts.$invalid" ng-click="DetailCtrl.save()">Submit</button>
+                    <button type="submit" adp-button="primary" ng-submit ng-disabled="DetailCtrl.EditProducts.$invalid" ng-click="DetailCtrl.save()">Submit</button>
                     <button type="button" adp-button="secondary" ng-click="go('/')">Cancel</button>
                 </div>
             </form>

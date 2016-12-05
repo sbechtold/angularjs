@@ -11,4 +11,12 @@ angular.module("myApp.components", [])
         bindings: {
             team: "="
         }
+    })
+    .component("teamcomponent", {
+        templateUrl: "components/partials/teamComponent.html",
+        controller: TeamComponentController,
+        controllerAs: "$ctrl",
+        bindings: {
+            team: "="
+        }
     });

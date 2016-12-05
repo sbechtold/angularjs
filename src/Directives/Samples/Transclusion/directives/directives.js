@@ -3,9 +3,10 @@ angular.module("myApp.directives", [])
         return {
             templateUrl:"directives/partials/pane-template.html",
             restrict:"E",
-            transclude:true,
+            transclude:false,
             scope: {
-                header:"="
+                header:"=",
+                subTitle:"=?"
             }
         };
     }]);

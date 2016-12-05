@@ -12,8 +12,6 @@ angular.module("myApp.directives", [])
             transclude:true,
             scope: {
                 header:"="
-            },
-            link: function (scope, element, attrs) {
             }
         };
     }]);

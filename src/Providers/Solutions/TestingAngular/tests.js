@@ -68,7 +68,7 @@ describe("Testing Controller", function () {
        //expect(actual.productName).toBe("test");
 
        actual.$promise.then(function(val) {
-           expect(val.productName).toBe("test");
+           expect(val.productName).toBe("test-a");
            expect(actual.productName).toBe("test");
        });
 
